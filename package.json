@@ -17,7 +17,6 @@
     },
     "main": "index.js",
     "files": [
-        ".editorconfig",
         "index.js",
         "index.d.ts"
     ],

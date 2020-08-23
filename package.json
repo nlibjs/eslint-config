@@ -11,7 +11,7 @@
         "url": "https://github.com/kei-ito"
     },
     "homepage": "https://github.com/nlibjs/eslint-config",
-    "repository": "https://github.com/nlibjs/nlibjs",
+    "repository": "https://github.com/nlibjs/eslint-config",
     "engines": {
         "node": ">=10"
     },

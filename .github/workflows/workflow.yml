@@ -33,10 +33,7 @@ jobs:
         with:
           path: lib
           key: lib-${{ matrix.os }}-${{ github.run_number }}
-      - uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node }}
-      - run: npm run build
+      # - run: npm run build
   Test:
     runs-on: ${{ matrix.os }}
     needs:

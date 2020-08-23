@@ -1,1 +1,1 @@
-# eslint-config
+# @nlib/eslint-config

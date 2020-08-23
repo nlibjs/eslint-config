@@ -22,7 +22,7 @@
     ],
     "scripts": {
         "test": "ava",
-        "lint": "eslint index.js test",
+        "lint": "eslint --ext .ts --ext .js index.js test",
         "version:changelog": "conventional-changelog --preset angular --infile CHANGELOG.md --same-file --release-count 0",
         "version:add": "git add .",
         "version": "run-s version:changelog version:add"
@@ -79,7 +79,7 @@
     "husky": {
         "hooks": {
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-            "pre-commit": "npx run-p test lint"
+            "pre-commit": "run-p test lint"
         }
     },
     "renovate": {

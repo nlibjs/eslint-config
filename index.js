@@ -58,7 +58,11 @@ module.exports = {
         'func-style': ERROR,
         'function-call-argument-newline': [ERROR, 'consistent'],
         'function-paren-newline': OFF,
-        'generator-star-spacing': [ERROR, {before: false, after: true}],
+        'generator-star-spacing': [ERROR, {
+            named: 'after',
+            anonymous: 'after',
+            method: 'before',
+        }],
         'getter-return': ERROR,
         'grouped-accessor-pairs': ERROR,
         'guard-for-in': ERROR,

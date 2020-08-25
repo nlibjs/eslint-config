@@ -1,3 +1,12 @@
+## [3.17.5](https://github.com/nlibjs/eslint-config/compare/v3.17.4...v3.17.5) (2020-08-25)
+
+
+### Bug Fixes
+
+* generator-star-spacing configuration ([15638d2](https://github.com/nlibjs/eslint-config/commit/15638d27e36c8869da4d6ee0ac39bee8c07615e7))
+
+
+
 ## [3.17.4](https://github.com/nlibjs/eslint-config/compare/v3.17.3...v3.17.4) (2020-08-23)
 
 

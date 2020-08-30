@@ -13,6 +13,7 @@ const prefix = (ruleNamePrefix, map) => Object.keys(map).reduce((result, name) =
 }, {});
 
 module.exports = {
+    plugins: ['@nlib'],
     parserOptions: {
         ecmaVersion: new Date().getFullYear() - 1,
         sourceType: 'module',

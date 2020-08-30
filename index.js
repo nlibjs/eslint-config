@@ -415,6 +415,7 @@ module.exports = {
                     'no-floating-promises': ERROR,
                     'no-for-in-array': ERROR,
                     'no-inferrable-types': ERROR,
+                    'no-implicit-any-catch': ERROR,
                     'no-implied-eval': ERROR,
                     'no-invalid-this': OFF,
                     'no-invalid-void-type': ERROR,

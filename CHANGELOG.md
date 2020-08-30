@@ -1,3 +1,12 @@
+## [3.17.6](https://github.com/nlibjs/eslint-config/compare/v3.17.5...v3.17.6) (2020-08-30)
+
+
+### Features
+
+* add plugin ([c07d877](https://github.com/nlibjs/eslint-config/commit/c07d877bf11f231a66fbd5a8a925d1a5353d7ddb))
+
+
+
 ## [3.17.5](https://github.com/nlibjs/eslint-config/compare/v3.17.4...v3.17.5) (2020-08-25)
 
 

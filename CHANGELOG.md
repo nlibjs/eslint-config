@@ -1,3 +1,12 @@
+## [3.17.9](https://github.com/nlibjs/eslint-config/compare/v3.17.8...v3.17.9) (2020-09-02)
+
+
+### Features
+
+* include the plugin ([ce696da](https://github.com/nlibjs/eslint-config/commit/ce696da90f735c8d72d1e931aeedb80e831a1fe6))
+
+
+
 ## [3.17.8](https://github.com/nlibjs/eslint-config/compare/v3.17.7...v3.17.8) (2020-09-02)
 
 

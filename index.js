@@ -20,7 +20,9 @@ module.exports = {
     env: {
         es6: true,
     },
+    plugins: ['@nlib'],
     rules: {
+        '@nlib/no-globals': ERROR,
         'accessor-pairs': OFF,
         'array-bracket-newline': [ERROR, 'consistent'],
         'array-bracket-spacing': [ERROR, 'never'],

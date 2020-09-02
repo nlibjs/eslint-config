@@ -1,11 +1,13 @@
 import * as path from 'path';
 import ava from 'ava';
 import * as availableRules from './availableRules';
+import {rules as nlibRules} from '@nlib/eslint-plugin';
 import {ESLint, Linter} from 'eslint';
 
 const eslint = new ESLint({
     overrideConfigFile: path.join(__dirname, '../index.js'),
 });
+const nlibRuleNames = new Set(Object.keys(nlibRules).map((name) => `@nlib/${name}`));
 const jsConfigPromise: Promise<Linter.Config> = eslint.calculateConfigForFile(path.join(__dirname, '../index.js'));
 const tsConfigPromise: Promise<Linter.Config> = eslint.calculateConfigForFile(path.join(__dirname, '../index.ts'));
 const tsPrefix = '@typescript-eslint/';
@@ -33,7 +35,10 @@ for (const [ruleName, rule] of availableRules.js) {
 ava('should not have unsupported rules (js)', async (t) => {
     const {rules = {}} = await jsConfigPromise;
     for (const ruleName of Object.keys(rules)) {
-        t.true(availableRules.js.has(ruleName), `${ruleName} is not supported`);
+        t.true(
+            availableRules.js.has(ruleName) || nlibRuleNames.has(ruleName),
+            `${ruleName} is not supported`,
+        );
     }
 });
 
@@ -68,7 +73,7 @@ ava('should not have unsupported rules (ts)', async (t) => {
             );
         } else {
             t.true(
-                availableRules.js.has(ruleName),
+                availableRules.js.has(ruleName) || nlibRuleNames.has(ruleName),
                 `${ruleName} is not supported.`,
             );
         }

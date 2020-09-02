@@ -1,28 +1,11 @@
 import * as path from 'path';
 import ava from 'ava';
-import {ESLint, Linter} from 'eslint';
+import {ESLint} from 'eslint';
+import {listRuleIds} from './util';
 
 const eslint = new ESLint({
     overrideConfigFile: path.join(__dirname, '../index.js'),
 });
-
-const listMessages = function* (
-    result: Array<ESLint.LintResult>,
-): Generator<Linter.LintMessage> {
-    for (const {messages} of result) {
-        for (const message of messages) {
-            yield message;
-        }
-    }
-};
-
-const listRuleIds = function* (
-    result: Array<ESLint.LintResult>,
-) {
-    for (const message of listMessages(result)) {
-        yield message.ruleId;
-    }
-};
 
 ava('function* ()', async (t) => {
     const code = [

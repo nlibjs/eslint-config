@@ -1,3 +1,12 @@
+## [3.17.8](https://github.com/nlibjs/eslint-config/compare/v3.17.7...v3.17.8) (2020-09-02)
+
+
+### Reverts
+
+* remove plugin ([bd33da8](https://github.com/nlibjs/eslint-config/commit/bd33da805cc0b2727a3d44b9d3f600e689494eee))
+
+
+
 ## [3.17.7](https://github.com/nlibjs/eslint-config/compare/v3.17.6...v3.17.7) (2020-09-02)
 
 

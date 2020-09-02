@@ -1,3 +1,12 @@
+## [3.17.7](https://github.com/nlibjs/eslint-config/compare/v3.17.6...v3.17.7) (2020-09-02)
+
+
+### Features
+
+* support typescript-eslint 4.0.1 ([04341f9](https://github.com/nlibjs/eslint-config/commit/04341f9366d14c1a3d599f31c412b858c62ec9bd))
+
+
+
 ## [3.17.6](https://github.com/nlibjs/eslint-config/compare/v3.17.5...v3.17.6) (2020-08-30)
 
 

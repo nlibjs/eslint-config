@@ -30,6 +30,9 @@
     "peerDependencies": {
         "eslint": ">= 3"
     },
+    "dependencies": {
+        "@nlib/eslint-plugin": "^1.0.8"
+    },
     "devDependencies": {
         "@commitlint/cli": "^9.1.2",
         "@commitlint/config-conventional": "^9.1.2",
@@ -93,8 +96,5 @@
             ":label(dependencies)",
             ":automergeMinor"
         ]
-    },
-    "dependencies": {
-        "@nlib/eslint-plugin": "^1.0.8"
     }
 }

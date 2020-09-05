@@ -1,3 +1,12 @@
+## [3.17.11](https://github.com/nlibjs/eslint-config/compare/v3.17.10...v3.17.11) (2020-09-05)
+
+
+### Features
+
+* add breaking ([359ca44](https://github.com/nlibjs/eslint-config/commit/359ca44d2592432fba28a4906bc8696008d07699))
+
+
+
 ## [3.17.10](https://github.com/nlibjs/eslint-config/compare/v3.17.9...v3.17.10) (2020-09-05)
 
 

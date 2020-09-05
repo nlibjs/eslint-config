@@ -1,3 +1,12 @@
+## [3.17.10](https://github.com/nlibjs/eslint-config/compare/v3.17.9...v3.17.10) (2020-09-05)
+
+
+### Features
+
+* expose commitlint.config ([8679cab](https://github.com/nlibjs/eslint-config/commit/8679cabcb10cc78dcc423d4a2210e746f92dc167))
+
+
+
 ## [3.17.9](https://github.com/nlibjs/eslint-config/compare/v3.17.8...v3.17.9) (2020-09-02)
 
 

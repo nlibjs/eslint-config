@@ -9,7 +9,7 @@ module.exports = {
         'type-enum': [
             2,
             'always',
-            rules['type-enum'][2].concat('deps'),
+            rules['type-enum'][2].concat('deps', 'breaking'),
         ],
     },
 };

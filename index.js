@@ -330,6 +330,7 @@ module.exports = {
                 },
                 off(
                     'brace-style',
+                    'comma-dangle',
                     'comma-spacing',
                     'consistent-this',
                     'default-param-last',
@@ -377,6 +378,7 @@ module.exports = {
                     }],
                     'brace-style': [ERROR, '1tbs'],
                     'class-literal-property-style': ERROR,
+                    'comma-dangle': [ERROR, 'always-multiline'],
                     'comma-spacing': [ERROR, {before: false, after: true}],
                     'consistent-type-assertions': [ERROR, {
                         assertionStyle: 'as',

@@ -1,9 +1,10 @@
 # Changelog
 
-## v0.1.7 (2020-10-03)
+## v3.17.14 (2020-10-03)
 
 ### Dependency Upgrades
 
+- @nlib/changelog@0.1.8 (42fca0b)
 - install @nlib/lint-commit (0285100)
 
 

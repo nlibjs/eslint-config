@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.17.15 (2020-11-08)
+
+### Features
+
+- upgrade typescript-eslint/eslint-plugin (#16) (5a47b03)
+
+
 ## v3.17.14 (2020-10-03)
 
 ### Dependency Upgrades

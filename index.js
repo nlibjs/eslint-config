@@ -343,6 +343,7 @@ module.exports = {
                     'no-array-constructor',
                     'no-dupe-args',
                     'no-dupe-class-members',
+                    'no-duplicate-imports',
                     'no-empty-function',
                     'no-extra-parens',
                     'no-extra-semi',
@@ -363,6 +364,7 @@ module.exports = {
                     'require-await',
                     'semi',
                     'space-before-function-paren',
+                    'space-infix-ops',
                 ),
                 prefix('@typescript-eslint/', {
                     'adjacent-overload-signatures': ERROR,
@@ -380,6 +382,7 @@ module.exports = {
                     'class-literal-property-style': ERROR,
                     'comma-dangle': [ERROR, 'always-multiline'],
                     'comma-spacing': [ERROR, {before: false, after: true}],
+                    'consistent-indexed-object-style': ERROR,
                     'consistent-type-assertions': [ERROR, {
                         assertionStyle: 'as',
                         objectLiteralTypeAssertions: 'never',
@@ -408,9 +411,12 @@ module.exports = {
                     'method-signature-style': ERROR,
                     'naming-convention': OFF,
                     'no-array-constructor': ERROR,
-                    'no-base-to-string': ERROR,
+                    'no-base-to-string': [ERROR, {
+                        ignoredTypeNames: ['RegExp', 'URL'],
+                    }],
                     'no-confusing-non-null-assertion': ERROR,
                     'no-dupe-class-members': ERROR,
+                    'no-duplicate-imports': ERROR,
                     'no-dynamic-delete': ERROR,
                     'no-empty-function': ERROR,
                     'no-empty-interface': OFF,
@@ -446,6 +452,7 @@ module.exports = {
                     'no-type-alias': OFF,
                     'no-unnecessary-boolean-literal-compare': ERROR,
                     'no-unnecessary-condition': [ERROR, {allowConstantLoopConditions: true}],
+                    'no-unnecessary-type-constraint': ERROR,
                     'no-unnecessary-qualifier': ERROR,
                     'no-unnecessary-type-arguments': ERROR,
                     'no-unnecessary-type-assertion': ERROR,
@@ -486,6 +493,7 @@ module.exports = {
                         named: 'never',
                         asyncArrow: 'always',
                     }],
+                    'space-infix-ops': ERROR,
                     'strict-boolean-expressions': OFF,
                     'switch-exhaustiveness-check': ERROR,
                     'triple-slash-reference': [ERROR, {

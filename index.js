@@ -416,7 +416,7 @@ module.exports = {
                     }],
                     'no-confusing-non-null-assertion': ERROR,
                     'no-confusing-void-expression': [ERROR, {
-                        ignoreArrowShorthand: false,
+                        ignoreArrowShorthand: true,
                         ignoreVoidOperator: false,
                     }],
                     'no-dupe-class-members': ERROR,

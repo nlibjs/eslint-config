@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.17.16 (2020-12-19)
+
+### Dependency Upgrades
+
+- upgrade dependencies (#48) (6ac5d45)
+
+
 ## v3.17.15 (2020-11-08)
 
 ### Features

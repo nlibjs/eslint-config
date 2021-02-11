@@ -30,7 +30,7 @@
         "eslint": ">= 3"
     },
     "dependencies": {
-        "@nlib/eslint-plugin": "1.0.9"
+        "@nlib/eslint-plugin": "1.0.10"
     },
     "devDependencies": {
         "@nlib/changelog": "0.1.9",

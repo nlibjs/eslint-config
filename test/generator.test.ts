@@ -73,7 +73,11 @@ ava('function * named()', async (t) => {
     const result = await eslint.lintText(code);
     t.deepEqual(
         [...listRuleIds(result)],
-        ['func-style', 'generator-star-spacing', 'no-unused-vars'],
+        [
+            'func-style',
+            'generator-star-spacing',
+            'no-unused-vars',
+        ],
     );
 });
 
@@ -87,7 +91,12 @@ ava('function *named()', async (t) => {
     const result = await eslint.lintText(code);
     t.deepEqual(
         [...listRuleIds(result)],
-        ['func-style', 'generator-star-spacing', 'generator-star-spacing', 'no-unused-vars'],
+        [
+            'func-style',
+            'generator-star-spacing',
+            'generator-star-spacing',
+            'no-unused-vars',
+        ],
     );
 });
 
@@ -101,7 +110,11 @@ ava('*method ()', async (t) => {
     const result = await eslint.lintText(code);
     t.deepEqual(
         [...listRuleIds(result)],
-        ['no-unused-vars', 'class-methods-use-this'],
+        [
+            'no-unused-vars',
+            'class-methods-use-this',
+            'no-empty-function',
+        ],
     );
 });
 
@@ -115,6 +128,11 @@ ava('* method ()', async (t) => {
     const result = await eslint.lintText(code);
     t.deepEqual(
         [...listRuleIds(result)],
-        ['no-unused-vars', 'generator-star-spacing', 'class-methods-use-this'],
+        [
+            'no-unused-vars',
+            'generator-star-spacing',
+            'class-methods-use-this',
+            'no-empty-function',
+        ],
     );
 });

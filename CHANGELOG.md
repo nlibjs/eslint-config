@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.17.19 (2021-02-24)
+
+### Dependency Upgrades
+
+- upgrade nlib/eslint-plugin (e0752e2)
+
+
 ## v3.17.18 (2021-02-11)
 
 ### Dependency Upgrades

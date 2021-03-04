@@ -1,5 +1,16 @@
 # Changelog
 
+## v3.17.20 (2021-03-04)
+
+### Features
+
+- use type-imports (cc2c9c4)
+
+### Dependency Upgrades
+
+- @typescript-eslint/eslint-plugin:4.15.2→4.16.1 @typescript-eslint/parser:4.15.2→4.16.1 husky:4.3.8→5.1.3 (7631f6f)
+
+
 ## v3.17.19 (2021-02-24)
 
 ### Dependency Upgrades

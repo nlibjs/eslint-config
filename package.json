@@ -30,22 +30,22 @@
         "eslint": ">= 3"
     },
     "dependencies": {
-        "@nlib/eslint-plugin": "1.0.11"
+        "@nlib/eslint-plugin": "1.0.12"
     },
     "devDependencies": {
         "@nlib/changelog": "0.1.9",
         "@nlib/githooks": "0.0.4",
         "@nlib/lint-commit": "0.1.3",
-        "@types/eslint": "7.2.6",
-        "@types/node": "14.14.31",
-        "@typescript-eslint/eslint-plugin": "4.16.1",
-        "@typescript-eslint/parser": "4.16.1",
+        "@types/eslint": "7.2.7",
+        "@types/node": "14.14.37",
+        "@typescript-eslint/eslint-plugin": "4.19.0",
+        "@typescript-eslint/parser": "4.19.0",
         "ava": "3.15.0",
-        "eslint": "7.21.0",
+        "eslint": "7.23.0",
         "lint-staged": "10.5.4",
         "npm-run-all": "4.1.5",
         "ts-node": "9.1.1",
-        "typescript": "4.2.2"
+        "typescript": "4.2.3"
     },
     "ava": {
         "extensions": [

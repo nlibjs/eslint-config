@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.17.21 (2021-03-27)
+
+### Dependency Upgrades
+
+- setup githooks (#88) (31c7f98)
+
+
 ## v3.17.20 (2021-03-04)
 
 ### Features

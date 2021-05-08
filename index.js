@@ -474,6 +474,7 @@ module.exports = {
                     'no-unnecessary-qualifier': ERROR,
                     'no-unnecessary-type-arguments': ERROR,
                     'no-unnecessary-type-assertion': ERROR,
+                    'no-unsafe-argument': ERROR,
                     'no-unsafe-assignment': ERROR,
                     'no-unsafe-call': ERROR,
                     'no-unsafe-member-access': ERROR,

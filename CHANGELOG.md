@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.17.22 (2021-05-08)
+
+### Dependency Upgrades
+
+- @types/node:14.14.43→15.0.2 (#106) (b0c9cb3)
+
+
 ## v3.17.21 (2021-03-27)
 
 ### Dependency Upgrades

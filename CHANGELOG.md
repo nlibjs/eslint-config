@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.17.23 (2021-07-01)
+
+### Features
+
+- support tsx (f3eed68)
+
+
 ## v3.17.22 (2021-05-08)
 
 ### Dependency Upgrades

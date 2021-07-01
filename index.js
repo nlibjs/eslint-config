@@ -357,9 +357,14 @@ module.exports = {
     rules: eslintRules,
     overrides: [
         {
-            files: ['*.ts'],
+            files: ['*.ts', '*.tsx'],
             parser: '@typescript-eslint/parser',
-            parserOptions: {project: './tsconfig.json'},
+            parserOptions: {
+                project: './tsconfig.json',
+                ecmaFeatures: {
+                    jsx: true,
+                },
+            },
             plugins: ['@typescript-eslint'],
             rules: merge(
                 {

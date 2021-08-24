@@ -1,5 +1,13 @@
 # Changelog
 
+## v3.17.24 (2021-08-24)
+
+### Dependency Upgrades
+
+- @types/node:15.14.7→16.7.1 @typescript-eslint/eslint-plugin:4.28.5→4.29.3 @typescript-eslint/parser:4.29.2→4.29.3 (9433b03)
+- @nlib/eslint-plugin:1.0.12→1.0.13 ts-node:9.1.1→10.2.1 (8b08a15)
+
+
 ## v3.17.23 (2021-07-01)
 
 ### Features

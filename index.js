@@ -440,7 +440,7 @@ module.exports = {
                         multiline: {delimiter: 'comma', requireLast: true},
                         singleline: {delimiter: 'comma', requireLast: false},
                     }],
-                    'member-ordering': ERROR,
+                    'member-ordering': OFF,
                     'method-signature-style': ERROR,
                     'naming-convention': OFF,
                     'no-base-to-string': [ERROR, {
@@ -499,6 +499,7 @@ module.exports = {
                     'prefer-reduce-type-parameter': ERROR,
                     'prefer-regexp-exec': ERROR,
                     'prefer-readonly': ERROR,
+                    'prefer-return-this-type': OFF,
                     'prefer-string-starts-ends-with': ERROR,
                     'prefer-ts-expect-error': ERROR,
                     'promise-function-async': ERROR,

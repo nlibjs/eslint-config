@@ -1,15 +1,16 @@
-import * as path from 'path';
-import ava from 'ava';
-import * as availableRules from './availableRules';
 import {rules as nlibRules} from '@nlib/eslint-plugin';
-import {ESLint, Linter} from 'eslint';
+import ava from 'ava';
+import type {Linter} from 'eslint';
+import {ESLint} from 'eslint';
+import * as path from 'path';
+import * as availableRules from './availableRules';
 
 const eslint = new ESLint({
     overrideConfigFile: path.join(__dirname, '../index.js'),
 });
 const nlibRuleNames = new Set(Object.keys(nlibRules).map((name) => `@nlib/${name}`));
-const jsConfigPromise: Promise<Linter.Config> = eslint.calculateConfigForFile(path.join(__dirname, '../index.js'));
-const tsConfigPromise: Promise<Linter.Config> = eslint.calculateConfigForFile(path.join(__dirname, '../index.ts'));
+const jsConfigPromise: Promise<Linter.Config> = eslint.calculateConfigForFile(path.join(__dirname, '../index.js')) as Promise<Linter.Config>;
+const tsConfigPromise: Promise<Linter.Config> = eslint.calculateConfigForFile(path.join(__dirname, '../index.ts')) as Promise<Linter.Config>;
 const tsPrefix = '@typescript-eslint/';
 
 for (const [ruleName, rule] of availableRules.js) {

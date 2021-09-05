@@ -21,7 +21,7 @@
     ],
     "scripts": {
         "test": "ava",
-        "lint": "eslint --ext .ts --ext .js index.js test",
+        "lint": "eslint --ext .ts --ext .js index.js index.d.ts test",
         "version": "run-s version:changelog version:add",
         "version:changelog": "npx @nlib/changelog --output CHANGELOG.md",
         "version:add": "git add ."
@@ -65,17 +65,7 @@
         },
         "rules": {
             "@nlib/no-globals": "off"
-        },
-        "overrides": [
-            {
-                "files": [
-                    "test/rules.test.ts"
-                ],
-                "rules": {
-                    "@typescript-eslint/no-unsafe-assignment": "off"
-                }
-            }
-        ]
+        }
     },
     "lint-staged": {
         "*.ts": [

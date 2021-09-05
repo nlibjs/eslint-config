@@ -23,7 +23,7 @@
         "test": "ava",
         "lint": "eslint --ext .ts --ext .js index.js test",
         "version": "run-s version:changelog version:add",
-        "version:changelog": "nlib-changelog --output CHANGELOG.md",
+        "version:changelog": "npx @nlib/changelog --output CHANGELOG.md",
         "version:add": "git add ."
     },
     "peerDependencies": {
@@ -33,9 +33,7 @@
         "@nlib/eslint-plugin": "1.0.13"
     },
     "devDependencies": {
-        "@nlib/changelog": "0.1.9",
         "@nlib/githooks": "0.0.5",
-        "@nlib/lint-commit": "0.1.4",
         "@types/eslint": "7.28.0",
         "@types/node": "16.7.10",
         "@typescript-eslint/eslint-plugin": "4.30.0",

@@ -30,7 +30,7 @@
         "eslint": ">= 3"
     },
     "dependencies": {
-        "@nlib/eslint-plugin": "1.0.13"
+        "@nlib/eslint-plugin": "1.0.15"
     },
     "devDependencies": {
         "@nlib/githooks": "0.0.5",

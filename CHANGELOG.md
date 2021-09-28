@@ -1,5 +1,16 @@
 # Changelog
 
+## v3.17.26 (2021-09-28)
+
+### Bug Fixes
+
+- cover missing rules ([f018524](https://github.com/nlibjs/eslint-config/commit/f018524f78da4951d834d4259277d4289a26515d))
+
+### Dependency Upgrades
+
+- @types/node:16.9.6→16.10.1 @typescript-eslint/eslint-plugin:4.30.0→4.32.0 @typescript-eslint/parser:4.31.2→4.32.0 ([325a50e](https://github.com/nlibjs/eslint-config/commit/325a50e37695bcec31f00b410d759b2bb79a616e))
+
+
 ## v3.17.25 (2021-09-05)
 
 ### Bug Fixes

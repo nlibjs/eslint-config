@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.17.27 (2021-10-22)
+
+### Dependency Upgrades
+
+- @nlib/eslint-plugin:1.0.15→1.0.16 @types/eslint:7.28.0→7.28.2 @types/node:16.10.1→16.11.3 @typescript-eslint/eslint-plugin:4.32.0→5.1.0 @typescript-eslint/parser:4.32.0→5.1.0 lint-staged:11.1.2→11.2.3 ts-node:10.2.1→10.3.1 typescript:4.4.3→4.4.4 ([b78376a](https://github.com/nlibjs/eslint-config/commit/b78376aa93cc06f0a16bd011f380cf39474aa3c4))
+
+
 ## v3.17.26 (2021-09-28)
 
 ### Bug Fixes

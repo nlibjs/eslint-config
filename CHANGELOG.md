@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.17.28 (2021-10-22)
+
+### Bug Fixes
+
+- delete no-implicit-any-catch ([0163599](https://github.com/nlibjs/eslint-config/commit/01635995b64481eb7271b157dbf6525fcd185083))
+
+
 ## v3.17.27 (2021-10-22)
 
 ### Dependency Upgrades

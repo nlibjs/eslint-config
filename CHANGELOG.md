@@ -1,5 +1,18 @@
 # Changelog
 
+## v3.17.29 (2021-11-25)
+
+### Bug Fixes
+
+- add @typescript-eslint/consistent-type-exports ([392794c](https://github.com/nlibjs/eslint-config/commit/392794c4b3b92c3c148e3b8cce5b385b6c73e398))
+- add no-unused-private-class-members ([c656aba](https://github.com/nlibjs/eslint-config/commit/c656aba2ee3d52a87faae85359e48505beaf1911))
+
+### Dependency Upgrades
+
+- install @nlib/lint-commit ([8cf0413](https://github.com/nlibjs/eslint-config/commit/8cf041348d3e26b70535c24b22560967faf5665d))
+- @nlib/eslint-plugin:1.0.16→1.0.17 @types/eslint:7.29.0→8.2.0 @types/node:16.11.9→16.11.10 @typescript-eslint/eslint-plugin:5.1.0→5.4.0 eslint:7.32.0→8.3.0 lint-staged:11.2.6→12.1.2 ([113f026](https://github.com/nlibjs/eslint-config/commit/113f026b60c2bfb3fe5baff624be552f96f021fe))
+
+
 ## v3.17.28 (2021-10-22)
 
 ### Bug Fixes

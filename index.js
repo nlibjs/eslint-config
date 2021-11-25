@@ -435,6 +435,7 @@ module.exports = {
                         objectLiteralTypeAssertions: 'never',
                     }],
                     'consistent-type-definitions': ERROR,
+                    'consistent-type-exports': OFF,
                     'consistent-type-imports': [ERROR, {prefer: 'type-imports'}],
                     'explicit-function-return-type': OFF,
                     'explicit-member-accessibility': ERROR,

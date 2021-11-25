@@ -217,6 +217,7 @@ const eslintRules = {
     'no-unsafe-negation': ERROR,
     'no-unused-expressions': ERROR,
     'no-unused-labels': ERROR,
+    'no-unused-private-class-members': ERROR,
     'no-unused-vars': [ERROR, {argsIgnorePattern: '^_'}],
     'no-unsafe-optional-chaining': [ERROR, {disallowArithmeticOperators: true}],
     'no-use-before-define': [ERROR, {variables: false}],

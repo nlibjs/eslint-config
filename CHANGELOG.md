@@ -1,5 +1,17 @@
 # Changelog
 
+## v3.17.30 (2021-12-18)
+
+### Bug Fixes
+
+- cover prefer-object-has-own ([54661ce](https://github.com/nlibjs/eslint-config/commit/54661ce581d128dd80a881264d796b451d88dcdd))
+
+### Dependency Upgrades
+
+- npm dedupe ([1b46d01](https://github.com/nlibjs/eslint-config/commit/1b46d017a8a62c9ba0b2d7594090171fb391155b))
+- @nlib/eslint-plugin:1.0.17→1.0.18 @types/eslint:8.2.0→8.2.1 @types/node:16.11.10→17.0.0 @typescript-eslint/eslint-plugin:5.4.0→5.7.0 @typescript-eslint/parser:5.4.0→5.7.0 eslint:8.3.0→8.5.0 lint-staged:12.1.2→12.1.3 typescript:4.5.2→4.5.4 ([65e6dc8](https://github.com/nlibjs/eslint-config/commit/65e6dc8962e507d92c72df39fa8ebca86803f9fc))
+
+
 ## v3.17.29 (2021-11-25)
 
 ### Bug Fixes

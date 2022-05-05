@@ -1,5 +1,26 @@
 # Changelog
 
+## v3.18.0 (2022-05-05)
+
+### Features
+
+- update config ([0fcb601](https://github.com/nlibjs/eslint-config/commit/0fcb60147d4c5d02f956d38a53a89bc59ba85370))
+
+### Code Refactoring
+
+- es modules ([f78de48](https://github.com/nlibjs/eslint-config/commit/f78de486d73e13f2f08c86d9b4ff30697866813d))
+
+### Continuous Integration
+
+- build before release ([ca174dc](https://github.com/nlibjs/eslint-config/commit/ca174dc20b3568bfe70918365a837cc4d611995c))
+
+### Dependency Upgrades
+
+- add typescript ([72fe59b](https://github.com/nlibjs/eslint-config/commit/72fe59b053905b339e3f561365f11219e4731739))
+- ava:3.15.0→4.2.0 ([19718a9](https://github.com/nlibjs/eslint-config/commit/19718a91ec304e61172e45d03c0715efd02e6a03))
+- @types/eslint:8.2.1→8.4.2 @types/node:17.0.0→17.0.31 @typescript-eslint/eslint-plugin:5.7.0→5.22.0 @typescript-eslint/parser:5.7.0→5.22.0 eslint:8.5.0→8.14.0 lint-staged:12.1.3→12.4.1 ts-node:10.4.0→10.7.0 typescript:4.5.4→4.6.4 ([b67e6ad](https://github.com/nlibjs/eslint-config/commit/b67e6adeacb7687b9dcb175f948bbc6b69d50807))
+
+
 ## v3.17.30 (2021-12-18)
 
 ### Bug Fixes

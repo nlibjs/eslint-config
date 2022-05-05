@@ -1,16 +1,15 @@
+/* eslint-disable @nlib/no-globals */
 import {rules as nlibRules} from '@nlib/eslint-plugin';
 import ava from 'ava';
-import type {Linter} from 'eslint';
 import {ESLint} from 'eslint';
-import * as path from 'path';
-import * as availableRules from './availableRules';
+import {availableRules} from './util.mjs';
 
-const eslint = new ESLint({
-    overrideConfigFile: path.join(__dirname, '../index.js'),
-});
+const eslint = new ESLint({overrideConfigFile: '.eslintrc.json'});
 const nlibRuleNames = new Set(Object.keys(nlibRules).map((name) => `@nlib/${name}`));
-const jsConfigPromise: Promise<Linter.Config> = eslint.calculateConfigForFile(path.join(__dirname, '../index.js')) as Promise<Linter.Config>;
-const tsConfigPromise: Promise<Linter.Config> = eslint.calculateConfigForFile(path.join(__dirname, '../index.ts')) as Promise<Linter.Config>;
+/** @type {Promise<import('eslint').Linter.Config>} */
+const jsConfigPromise = eslint.calculateConfigForFile('index.js');
+/** @type {Promise<import('eslint').Linter.Config>} */
+const tsConfigPromise = eslint.calculateConfigForFile('index.ts');
 const tsPrefix = '@typescript-eslint/';
 
 for (const [ruleName, rule] of availableRules.js) {
@@ -18,7 +17,8 @@ for (const [ruleName, rule] of availableRules.js) {
     if (rule.meta && rule.meta.deprecated) {
         ava(`should not cover "${ruleName} (deprecated)"`, async (t) => {
             const {rules = {}} = await jsConfigPromise;
-            const {replacedBy = ['none']} = ((rule.meta || {}) as unknown as {replacedBy?: Array<string>});
+            /** @type {{replacedBy?: Array<string>}} */
+            const {replacedBy = ['none']} = rule.meta || {};
             t.is(rules[ruleName], undefined, [
                 `${ruleName} is deprecated.`,
                 `candidates: ${replacedBy.join(', ')}`,
@@ -44,12 +44,13 @@ ava('should not have unsupported rules (js)', async (t) => {
 });
 
 for (const [name, rule] of availableRules.ts) {
-    const url = `https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/${name}.md`;
+    const url = `https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/${name}.md`;
     const ruleName = `${tsPrefix}${name}`;
     if (rule.meta && rule.meta.deprecated) {
         ava(`should not cover "${ruleName} (deprecated)"`, async (t) => {
             const {rules = {}} = await tsConfigPromise;
-            const {replacedBy = ['none']} = ((rule.meta || {}) as unknown as {replacedBy?: Array<string>});
+            /** @type {{replacedBy?: Array<string>}} */
+            const {replacedBy = ['none']} = rule.meta || {};
             t.is(rules[ruleName], undefined, [
                 `${ruleName} is deprecated.`,
                 `candidates: ${replacedBy.join(', ')}`,

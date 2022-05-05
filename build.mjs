@@ -1,3 +1,4 @@
+/* eslint-disable @nlib/no-globals */
 const OFF = 0;
 // const WARN = 1;
 const ERROR = 2;
@@ -348,7 +349,7 @@ const merge = (...rulesList) => {
     return result;
 };
 
-module.exports = {
+const config = {
     parserOptions: {
         ecmaVersion: new Date().getFullYear() - 1,
         sourceType: 'module',
@@ -541,3 +542,6 @@ module.exports = {
         },
     ],
 };
+
+import * as fs from 'fs';
+fs.writeFileSync('.eslintrc.json', JSON.stringify(config, null, 4));

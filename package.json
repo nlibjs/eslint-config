@@ -15,13 +15,16 @@
     "engines": {
         "node": ">=12"
     },
-    "main": "index.js",
+    "type": "module",
+    "main": ".eslintrc.json",
     "files": [
-        "index.*"
+        ".eslintrc.json"
     ],
     "scripts": {
-        "test": "ava",
-        "lint": "eslint --ext .ts --ext .js index.js index.d.ts test",
+        "build": "node build.mjs",
+        "test": "run-s build test:*",
+        "test:ava": "ava",
+        "lint": "eslint --ext .ts --ext .mjs build.mjs test",
         "version": "run-s version:changelog version:add",
         "version:changelog": "npx @nlib/changelog --output CHANGELOG.md",
         "version:add": "git add ."
@@ -42,31 +45,12 @@
         "ava": "3.15.0",
         "eslint": "8.14.0",
         "lint-staged": "12.4.1",
-        "npm-run-all": "4.1.5",
-        "ts-node": "10.7.0",
-        "typescript": "4.6.4"
+        "npm-run-all": "4.1.5"
     },
     "ava": {
-        "extensions": [
-            "ts"
-        ],
-        "require": [
-            "ts-node/register"
-        ],
         "files": [
-            "test/*.test.ts"
+            "test/*.test.mjs"
         ]
-    },
-    "eslintConfig": {
-        "extends": [
-            "./index.js"
-        ],
-        "env": {
-            "node": true
-        },
-        "rules": {
-            "@nlib/no-globals": "off"
-        }
     },
     "lint-staged": {
         "*.{ts,tsx,js,mjs,cjs,jsx}": [

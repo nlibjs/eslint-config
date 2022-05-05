@@ -1,11 +1,8 @@
-import * as path from 'path';
 import ava from 'ava';
 import {ESLint} from 'eslint';
-import {listRuleIds} from './util';
+import {listRuleIds} from './util.mjs';
 
-const eslint = new ESLint({
-    overrideConfigFile: path.join(__dirname, '../index.js'),
-});
+const eslint = new ESLint({overrideConfigFile: '.eslintrc.json'});
 
 ava('function* ()', async (t) => {
     const code = [

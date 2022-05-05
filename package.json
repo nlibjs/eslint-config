@@ -33,7 +33,7 @@
         "eslint": ">= 8"
     },
     "dependencies": {
-        "@nlib/eslint-plugin": "1.0.18"
+        "@nlib/eslint-plugin": "1.1.1"
     },
     "devDependencies": {
         "@nlib/githooks": "0.1.0",

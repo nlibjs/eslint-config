@@ -44,7 +44,7 @@ ava('should not have unsupported rules (js)', async (t) => {
 });
 
 for (const [name, rule] of availableRules.ts) {
-    const url = `https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/${name}.md`;
+    const url = `https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/${name}.md`;
     const ruleName = `${tsPrefix}${name}`;
     if (rule.meta && rule.meta.deprecated) {
         ava(`should not cover "${ruleName} (deprecated)"`, async (t) => {

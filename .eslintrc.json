@@ -603,8 +603,6 @@
                 "@typescript-eslint/no-array-constructor": 2,
                 "no-dupe-class-members": 0,
                 "@typescript-eslint/no-dupe-class-members": 2,
-                "no-duplicate-imports": 0,
-                "@typescript-eslint/no-duplicate-imports": 2,
                 "no-empty-function": 0,
                 "@typescript-eslint/no-empty-function": 2,
                 "no-extra-parens": 0,
@@ -703,6 +701,7 @@
                 ],
                 "@typescript-eslint/class-literal-property-style": 2,
                 "@typescript-eslint/consistent-indexed-object-style": 2,
+                "@typescript-eslint/consistent-generic-constructors": 2,
                 "@typescript-eslint/consistent-type-assertions": [
                     2,
                     {

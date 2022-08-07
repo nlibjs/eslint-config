@@ -394,7 +394,6 @@ const config = {
                     'lines-between-class-members': INHERIT,
                     'no-array-constructor': INHERIT,
                     'no-dupe-class-members': INHERIT,
-                    'no-duplicate-imports': INHERIT,
                     'no-empty-function': INHERIT,
                     'no-extra-parens': INHERIT,
                     'no-extra-semi': INHERIT,
@@ -434,6 +433,7 @@ const config = {
                     }],
                     'class-literal-property-style': ERROR,
                     'consistent-indexed-object-style': ERROR,
+                    'consistent-generic-constructors': ERROR,
                     'consistent-type-assertions': [ERROR, {
                         assertionStyle: 'as',
                         objectLiteralTypeAssertions: 'never',

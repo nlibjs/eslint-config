@@ -376,7 +376,7 @@ const baseRules = merge(
         'no-restricted-paths': ERROR,
         'no-absolute-path': ERROR,
         'no-dynamic-require': ERROR,
-        'no-internal-modules': ERROR,
+        'no-internal-modules': OFF,
         'no-namespace': OFF,
         'export': ERROR,
         'no-mutable-exports': ERROR,
@@ -409,7 +409,7 @@ const baseRules = merge(
         'no-useless-path-segments': ERROR,
         'dynamic-import-chunkname': ERROR,
         'no-import-module-exports': ERROR,
-        'exports-last': ERROR,
+        'exports-last': OFF,
         'no-deprecated': ERROR,
     }),
 );

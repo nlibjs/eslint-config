@@ -1,5 +1,29 @@
 # Changelog
 
+## v0.2.1 (2022-08-07)
+
+### Bug Fixes
+
+- add @typescript-eslint/consistent-generic-constructors ([bff2666](https://github.com/nlibjs/eslint-config/commit/bff2666d20b85a09dbe7ce77cd0c13c602e284c8))
+
+### Build System
+
+- version → postversion ([304afd9](https://github.com/nlibjs/eslint-config/commit/304afd9df25b32976f08dda95f7d23aed3518313))
+
+### Continuous Integration
+
+- drop 12.x ([5fcceb2](https://github.com/nlibjs/eslint-config/commit/5fcceb24dfc8a1c09f515a62f859a24546815d25))
+
+### Dependency Upgrades
+
+- npm audit fix ([a3b5fbe](https://github.com/nlibjs/eslint-config/commit/a3b5fbeecaa7faacd9f944ccba5904bc9aa11626))
+- @typescript-eslint/eslint-plugin:5.23.0→5.32.0 @typescript-eslint/parser:5.30.7→5.32.0 ([c504c4d](https://github.com/nlibjs/eslint-config/commit/c504c4de2f0761c07af8fb853e8498fd351c6c50))
+- @types/node:17.0.45→18.6.4 ([865b79f](https://github.com/nlibjs/eslint-config/commit/865b79f1310bea34117b49873e6dc48c9e1ea7ad))
+- lint-staged:12.5.0→13.0.3 ([00ade58](https://github.com/nlibjs/eslint-config/commit/00ade582b0936211a26f112e4c29815d8b24a901))
+- @types/eslint:8.4.2→8.4.5 eslint:8.17.0→8.21.0 ([57b529d](https://github.com/nlibjs/eslint-config/commit/57b529d3c69db4118330ebdc009d51814fecfbdb))
+- @nlib/eslint-plugin:1.1.0→1.1.1 ([499279e](https://github.com/nlibjs/eslint-config/commit/499279eb88fd78193c416c8267d334bd8454750d))
+
+
 ## v3.18.0 (2022-05-05)
 
 ### Features

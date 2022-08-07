@@ -1,10 +1,11 @@
 /* eslint-disable @nlib/no-globals */
+import fs from 'fs';
+
 const OFF = 0;
 // const WARN = 1;
 const ERROR = 2;
 const INHERIT = Symbol('Inherit');
 const eslintRules = {
-    '@nlib/no-globals': ERROR,
     'accessor-pairs': OFF,
     'array-bracket-newline': [ERROR, 'consistent'],
     'array-bracket-spacing': [ERROR, 'never'],
@@ -111,7 +112,7 @@ const eslintRules = {
     'no-dupe-else-if': ERROR,
     'no-dupe-keys': ERROR,
     'no-duplicate-case': ERROR,
-    'no-duplicate-imports': ERROR,
+    'no-duplicate-imports': OFF,
     'no-else-return': OFF,
     'no-empty-character-class': ERROR,
     'no-empty-function': ERROR,
@@ -316,13 +317,14 @@ const prefix = (ruleNamePrefix, rules) => {
 };
 
 /**
+ * @param {Record<string, unknown>} baseRules
  * @param {string} ruleNamePrefix
  * @param {Record<string, unknown>} extendedRules
  */
-const extendESLintRules = (ruleNamePrefix, extendedRules) => {
+const extendBaseRules = (baseRules, ruleNamePrefix, extendedRules) => {
     const result = {};
     for (const [ruleName, ruleConfig] of Object.entries(extendedRules)) {
-        const extendedConfig = ruleConfig === INHERIT ? eslintRules[ruleName] : ruleConfig;
+        const extendedConfig = ruleConfig === INHERIT ? baseRules[ruleName] : ruleConfig;
         if (typeof extendedConfig === 'undefined') {
             throw new Error(`NoRule: "${ruleName}"`);
         }
@@ -349,27 +351,95 @@ const merge = (...rulesList) => {
     return result;
 };
 
+/**
+ * @param  {...string} baseExtensions
+ */
+const importExtensions = function* (...baseExtensions) {
+    for (const extension of baseExtensions) {
+        yield `.m${extension}`;
+        yield `.m${extension}x`;
+        yield `.${extension}`;
+        yield `.${extension}x`;
+        yield `.c${extension}`;
+        yield `.c${extension}x`;
+    }
+};
+
+const baseRules = merge(
+    {'@nlib/no-globals': ERROR},
+    eslintRules,
+    prefix('import/', {
+        'no-unresolved': ERROR,
+        'named': ERROR,
+        'default': ERROR,
+        'namespace': ERROR,
+        'no-restricted-paths': ERROR,
+        'no-absolute-path': ERROR,
+        'no-dynamic-require': ERROR,
+        'no-internal-modules': ERROR,
+        'no-namespace': OFF,
+        'export': ERROR,
+        'no-mutable-exports': ERROR,
+        'extensions': OFF,
+        'group-exports': OFF,
+        'no-relative-packages': ERROR,
+        'no-relative-parent-imports': ERROR,
+        'no-self-import': ERROR,
+        'no-cycle': ERROR,
+        'no-named-default': ERROR,
+        'no-named-as-default': ERROR,
+        'no-named-as-default-member': ERROR,
+        'no-anonymous-default-export': ERROR,
+        'no-unused-modules': ERROR,
+        'no-commonjs': ERROR,
+        'no-amd': ERROR,
+        'no-duplicates': ERROR,
+        'first': ERROR,
+        'max-dependencies': OFF,
+        'no-extraneous-dependencies': ERROR,
+        'no-nodejs-modules': OFF,
+        'no-webpack-loader-syntax': ERROR,
+        'order': ERROR,
+        'newline-after-import': ERROR,
+        'prefer-default-export': ERROR,
+        'no-default-export': ERROR,
+        'no-named-export': OFF,
+        'unambiguous': ERROR,
+        'no-unassigned-import': ERROR,
+        'no-useless-path-segments': ERROR,
+        'dynamic-import-chunkname': ERROR,
+        'no-import-module-exports': ERROR,
+        'exports-last': ERROR,
+        'no-deprecated': ERROR,
+    }),
+);
+
 const config = {
     parserOptions: {
-        ecmaVersion: new Date().getFullYear() - 1,
+        ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    env: {
-        es6: true,
+    plugins: ['@nlib/eslint-plugin', 'eslint-plugin-import'],
+    env: {[`es${new Date().getFullYear() - 1}`]: true},
+    rules: baseRules,
+    settings: {
+        'import/extensions': [...importExtensions('js')],
     },
-    plugins: ['@nlib'],
-    rules: eslintRules,
     overrides: [
         {
             files: ['*.ts', '*.tsx'],
             parser: '@typescript-eslint/parser',
             parserOptions: {
                 project: './tsconfig.json',
-                ecmaFeatures: {
-                    jsx: true,
-                },
+                ecmaFeatures: {jsx: true},
             },
             plugins: ['@typescript-eslint'],
+            settings: {
+                'import/extensions': [
+                    ...importExtensions('ts'),
+                    ...importExtensions('js'),
+                ],
+            },
             rules: merge(
                 {
                     'no-restricted-syntax': [
@@ -377,7 +447,7 @@ const config = {
                         {selector: 'TSEnumDeclaration', message: 'Don\'t use enum.'},
                     ],
                 },
-                extendESLintRules('@typescript-eslint/', {
+                extendBaseRules(baseRules, '@typescript-eslint/', {
                     'brace-style': INHERIT,
                     'comma-dangle': INHERIT,
                     'comma-spacing': INHERIT,
@@ -543,5 +613,4 @@ const config = {
     ],
 };
 
-import * as fs from 'fs';
 fs.writeFileSync('.eslintrc.json', JSON.stringify(config, null, 4));

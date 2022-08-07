@@ -1,10 +1,12 @@
-import ava from 'ava';
+import * as console from 'console';
+import * as assert from 'assert';
 import {ESLint} from 'eslint';
 import {listRuleIds} from './util.mjs';
 
 const eslint = new ESLint({overrideConfigFile: '.eslintrc.json'});
 
-ava('function* ()', async (t) => {
+{
+    console.info('function* ()');
     const code = [
         'const named = function* () {',
         '    yield 1;',
@@ -12,13 +14,14 @@ ava('function* ()', async (t) => {
         '',
     ].join('\n');
     const result = await eslint.lintText(code);
-    t.deepEqual(
+    assert.deepEqual(
         [...listRuleIds(result)],
-        ['no-unused-vars'],
+        ['import/unambiguous', 'no-unused-vars'],
     );
-});
+}
 
-ava('function * ()', async (t) => {
+{
+    console.info('function * ()');
     const code = [
         'const named = function * () {',
         '    yield 1;',
@@ -26,13 +29,14 @@ ava('function * ()', async (t) => {
         '',
     ].join('\n');
     const result = await eslint.lintText(code);
-    t.deepEqual(
+    assert.deepEqual(
         [...listRuleIds(result)],
-        ['no-unused-vars', 'generator-star-spacing'],
+        ['import/unambiguous', 'no-unused-vars', 'generator-star-spacing'],
     );
-});
+}
 
-ava('function *()', async (t) => {
+{
+    console.info('function *()');
     const code = [
         'const named = function * () {',
         '    yield 1;',
@@ -40,13 +44,15 @@ ava('function *()', async (t) => {
         '',
     ].join('\n');
     const result = await eslint.lintText(code);
-    t.deepEqual(
+    assert.deepEqual(
         [...listRuleIds(result)],
-        ['no-unused-vars', 'generator-star-spacing'],
+        ['import/unambiguous', 'no-unused-vars', 'generator-star-spacing'],
     );
-});
 
-ava('function* named()', async (t) => {
+}
+
+{
+    console.info('function* named()');
     const code = [
         'function* named() {',
         '    yield 1;',
@@ -54,13 +60,14 @@ ava('function* named()', async (t) => {
         '',
     ].join('\n');
     const result = await eslint.lintText(code);
-    t.deepEqual(
+    assert.deepEqual(
         [...listRuleIds(result)],
-        ['func-style', 'no-unused-vars'],
+        ['import/unambiguous', 'func-style', 'no-unused-vars'],
     );
-});
+}
 
-ava('function * named()', async (t) => {
+{
+    console.info('function * named()');
     const code = [
         'function * named() {',
         '    yield 1;',
@@ -68,17 +75,19 @@ ava('function * named()', async (t) => {
         '',
     ].join('\n');
     const result = await eslint.lintText(code);
-    t.deepEqual(
+    assert.deepEqual(
         [...listRuleIds(result)],
         [
+            'import/unambiguous',
             'func-style',
             'generator-star-spacing',
             'no-unused-vars',
         ],
     );
-});
+}
 
-ava('function *named()', async (t) => {
+{
+    console.info('function *named()');
     const code = [
         'function *named() {',
         '    yield 1;',
@@ -86,18 +95,20 @@ ava('function *named()', async (t) => {
         '',
     ].join('\n');
     const result = await eslint.lintText(code);
-    t.deepEqual(
+    assert.deepEqual(
         [...listRuleIds(result)],
         [
+            'import/unambiguous',
             'func-style',
             'generator-star-spacing',
             'generator-star-spacing',
             'no-unused-vars',
         ],
     );
-});
+}
 
-ava('*method ()', async (t) => {
+{
+    console.info('*method ()');
     const code = [
         'class Foo {',
         '    *method() {}',
@@ -105,17 +116,19 @@ ava('*method ()', async (t) => {
         '',
     ].join('\n');
     const result = await eslint.lintText(code);
-    t.deepEqual(
+    assert.deepEqual(
         [...listRuleIds(result)],
         [
+            'import/unambiguous',
             'no-unused-vars',
             'class-methods-use-this',
             'no-empty-function',
         ],
     );
-});
+}
 
-ava('* method ()', async (t) => {
+{
+    console.info('* method ()');
     const code = [
         'class Foo {',
         '    * method() {}',
@@ -123,13 +136,16 @@ ava('* method ()', async (t) => {
         '',
     ].join('\n');
     const result = await eslint.lintText(code);
-    t.deepEqual(
+    assert.deepEqual(
         [...listRuleIds(result)],
         [
+            'import/unambiguous',
             'no-unused-vars',
             'generator-star-spacing',
             'class-methods-use-this',
             'no-empty-function',
         ],
     );
-});
+}
+
+console.info('passed');

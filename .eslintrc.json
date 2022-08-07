@@ -559,7 +559,7 @@
         "import/no-webpack-loader-syntax": 2,
         "import/order": 2,
         "import/newline-after-import": 2,
-        "import/prefer-default-export": 2,
+        "import/prefer-default-export": 0,
         "import/no-default-export": 2,
         "import/no-named-export": 0,
         "import/unambiguous": 2,
@@ -578,7 +578,20 @@
             ".jsx",
             ".cjs",
             ".cjsx"
-        ]
+        ],
+        "import/parsers": {
+            "@typescript-eslint/parser": [
+                ".mts",
+                ".mtsx",
+                ".ts",
+                ".tsx",
+                ".cts",
+                ".ctsx"
+            ]
+        },
+        "import/resolver": {
+            "typescript": {}
+        }
     },
     "overrides": [
         {

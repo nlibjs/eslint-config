@@ -424,6 +424,10 @@ const config = {
     rules: baseRules,
     settings: {
         'import/extensions': [...importExtensions('js')],
+        'import/parsers': {
+            '@typescript-eslint/parser': [...importExtensions('ts')],
+        },
+        'import/resolver': {typescript: {}},
     },
     overrides: [
         {

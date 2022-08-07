@@ -401,7 +401,7 @@ const baseRules = merge(
         'no-webpack-loader-syntax': ERROR,
         'order': ERROR,
         'newline-after-import': ERROR,
-        'prefer-default-export': ERROR,
+        'prefer-default-export': OFF,
         'no-default-export': ERROR,
         'no-named-export': OFF,
         'unambiguous': ERROR,

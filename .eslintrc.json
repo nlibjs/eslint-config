@@ -1,14 +1,15 @@
 {
     "parserOptions": {
-        "ecmaVersion": 2021,
+        "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "env": {
-        "es6": true
-    },
     "plugins": [
-        "@nlib"
+        "@nlib/eslint-plugin",
+        "eslint-plugin-import"
     ],
+    "env": {
+        "es2021": true
+    },
     "rules": {
         "@nlib/no-globals": 2,
         "accessor-pairs": 0,
@@ -207,7 +208,7 @@
         "no-dupe-else-if": 2,
         "no-dupe-keys": 2,
         "no-duplicate-case": 2,
-        "no-duplicate-imports": 2,
+        "no-duplicate-imports": 0,
         "no-else-return": 0,
         "no-empty-character-class": 2,
         "no-empty-function": 2,
@@ -525,7 +526,59 @@
                 "after": true
             }
         ],
-        "yoda": 0
+        "yoda": 0,
+        "import/no-unresolved": 2,
+        "import/named": 2,
+        "import/default": 2,
+        "import/namespace": 2,
+        "import/no-restricted-paths": 2,
+        "import/no-absolute-path": 2,
+        "import/no-dynamic-require": 2,
+        "import/no-internal-modules": 2,
+        "import/no-namespace": 0,
+        "import/export": 2,
+        "import/no-mutable-exports": 2,
+        "import/extensions": 0,
+        "import/group-exports": 0,
+        "import/no-relative-packages": 2,
+        "import/no-relative-parent-imports": 2,
+        "import/no-self-import": 2,
+        "import/no-cycle": 2,
+        "import/no-named-default": 2,
+        "import/no-named-as-default": 2,
+        "import/no-named-as-default-member": 2,
+        "import/no-anonymous-default-export": 2,
+        "import/no-unused-modules": 2,
+        "import/no-commonjs": 2,
+        "import/no-amd": 2,
+        "import/no-duplicates": 2,
+        "import/first": 2,
+        "import/max-dependencies": 0,
+        "import/no-extraneous-dependencies": 2,
+        "import/no-nodejs-modules": 0,
+        "import/no-webpack-loader-syntax": 2,
+        "import/order": 2,
+        "import/newline-after-import": 2,
+        "import/prefer-default-export": 2,
+        "import/no-default-export": 2,
+        "import/no-named-export": 0,
+        "import/unambiguous": 2,
+        "import/no-unassigned-import": 2,
+        "import/no-useless-path-segments": 2,
+        "import/dynamic-import-chunkname": 2,
+        "import/no-import-module-exports": 2,
+        "import/exports-last": 2,
+        "import/no-deprecated": 2
+    },
+    "settings": {
+        "import/extensions": [
+            ".mjs",
+            ".mjsx",
+            ".js",
+            ".jsx",
+            ".cjs",
+            ".cjsx"
+        ]
     },
     "overrides": [
         {
@@ -543,6 +596,22 @@
             "plugins": [
                 "@typescript-eslint"
             ],
+            "settings": {
+                "import/extensions": [
+                    ".mts",
+                    ".mtsx",
+                    ".ts",
+                    ".tsx",
+                    ".cts",
+                    ".ctsx",
+                    ".mjs",
+                    ".mjsx",
+                    ".js",
+                    ".jsx",
+                    ".cjs",
+                    ".cjsx"
+                ]
+            },
             "rules": {
                 "no-restricted-syntax": [
                     2,

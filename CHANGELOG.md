@@ -1,9 +1,10 @@
 # Changelog
 
-## v3.19.2 (2022-08-07)
+## v3.19.3 (2022-08-07)
 
 ### Bug Fixes
 
+- add eslint-import-resolver-typescript ([367a812](https://github.com/nlibjs/eslint-config/commit/367a812d43b2e220a32eba44afe997e902a18de2))
 - disable prefer-default-export ([5bca23f](https://github.com/nlibjs/eslint-config/commit/5bca23fc9ffde99151384393d1b718304a255393))
 - add @typescript-eslint/consistent-generic-constructors ([bff2666](https://github.com/nlibjs/eslint-config/commit/bff2666d20b85a09dbe7ce77cd0c13c602e284c8))
 

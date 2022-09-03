@@ -1,9 +1,14 @@
 # Changelog
 
-## v0.2.1 (2022-08-07)
+## v3.19.5 (2022-09-03)
+
+### Features
+
+- disable @nlib/no-globals ([e73e086](https://github.com/nlibjs/eslint-config/commit/e73e0865bb501622999641db010a87c6b77d140f))
 
 ### Bug Fixes
 
+- postversion doesn't work ([433fa68](https://github.com/nlibjs/eslint-config/commit/433fa685073e69ff1213c73d692d9be120338b03))
 - disable import/no-internal-modules and import/exports-last ([e3f22e3](https://github.com/nlibjs/eslint-config/commit/e3f22e38619bf99baad1f6732f3251e5f3f08449))
 - add eslint-import-resolver-typescript ([367a812](https://github.com/nlibjs/eslint-config/commit/367a812d43b2e220a32eba44afe997e902a18de2))
 - disable prefer-default-export ([5bca23f](https://github.com/nlibjs/eslint-config/commit/5bca23fc9ffde99151384393d1b718304a255393))

@@ -1,4 +1,3 @@
-/* eslint-disable @nlib/no-globals */
 import fs from 'fs';
 
 const OFF = 0;
@@ -366,7 +365,6 @@ const importExtensions = function* (...baseExtensions) {
 };
 
 const baseRules = merge(
-    {'@nlib/no-globals': ERROR},
     eslintRules,
     prefix('import/', {
         'no-unresolved': ERROR,

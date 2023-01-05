@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.19.6 (2023-01-05)
+
+### Dependency Upgrades
+
+- @types/eslint:8.4.6→8.4.10 @types/node:18.7.14→18.11.18 @typescript-eslint/eslint-plugin:5.36.1→5.48.0 @typescript-eslint/parser:5.36.1→5.48.0 eslint:8.23.0→8.31.0 eslint-import-resolver-typescript:3.5.0→3.5.2 lint-staged:13.0.3→13.1.0 typescript:4.8.2→4.9.4 ([c546449](https://github.com/nlibjs/eslint-config/commit/c546449c0dfb1cde93007efde3e83b28525e555d))
+
+
 ## v3.19.5 (2022-09-03)
 
 ### Features

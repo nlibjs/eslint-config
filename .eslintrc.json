@@ -8,7 +8,7 @@
         "eslint-plugin-import"
     ],
     "env": {
-        "es2021": true
+        "es2022": true
     },
     "rules": {
         "accessor-pairs": 0,
@@ -146,6 +146,10 @@
             2,
             "always"
         ],
+        "logical-assignment-operators": [
+            2,
+            "never"
+        ],
         "max-classes-per-file": 0,
         "max-depth": 0,
         "max-len": 0,
@@ -212,6 +216,7 @@
         "no-empty-character-class": 2,
         "no-empty-function": 2,
         "no-empty-pattern": 2,
+        "no-empty-static-block": 2,
         "no-empty": 2,
         "no-eq-null": 2,
         "no-eval": 2,
@@ -297,6 +302,7 @@
         "no-negated-condition": 2,
         "no-nested-ternary": 2,
         "no-new-func": 2,
+        "no-new-native-nonconstructor": 2,
         "no-new-object": 2,
         "no-new-symbol": 2,
         "no-new-wrappers": 2,
@@ -567,7 +573,9 @@
         "import/dynamic-import-chunkname": 2,
         "import/no-import-module-exports": 2,
         "import/exports-last": 0,
-        "import/no-deprecated": 2
+        "import/no-deprecated": 2,
+        "@nlib/no-globals": 0,
+        "@nlib/print-filename": 0
     },
     "settings": {
         "import/extensions": [
@@ -881,6 +889,7 @@
                 "@typescript-eslint/no-unsafe-argument": 2,
                 "@typescript-eslint/no-unsafe-assignment": 2,
                 "@typescript-eslint/no-unsafe-call": 2,
+                "@typescript-eslint/no-unsafe-declaration-merging": 2,
                 "@typescript-eslint/no-unsafe-member-access": 2,
                 "@typescript-eslint/no-unsafe-return": 2,
                 "@typescript-eslint/no-useless-empty-export": 2,
@@ -912,7 +921,7 @@
                     2,
                     "always"
                 ],
-                "@typescript-eslint/sort-type-union-intersection-members": 2,
+                "@typescript-eslint/sort-type-constituents": 2,
                 "@typescript-eslint/strict-boolean-expressions": 0,
                 "@typescript-eslint/switch-exhaustiveness-check": 2,
                 "@typescript-eslint/triple-slash-reference": [

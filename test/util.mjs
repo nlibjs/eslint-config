@@ -7,7 +7,7 @@ import * as nlibPlugin from '@nlib/eslint-plugin';
 export const available = {
     js: {
         prefix: '',
-        documentUrl: (ruleName) => `https://eslint.org/docs/rules/${ruleName}`,
+        documentUrl: (ruleName) => `https://eslint.org/docs/latest/rules/${ruleName}`,
         rules: new eslint.Linter().getRules(),
         fileName: 'index.js',
     },

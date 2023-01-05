@@ -66,6 +66,7 @@ const eslintRules = {
     'linebreak-style': [ERROR, 'unix'],
     'lines-around-comment': OFF,
     'lines-between-class-members': [ERROR, 'always'],
+    'logical-assignment-operators': [ERROR, 'never'],
     'max-classes-per-file': OFF,
     'max-depth': OFF,
     'max-len': OFF,
@@ -116,6 +117,7 @@ const eslintRules = {
     'no-empty-character-class': ERROR,
     'no-empty-function': ERROR,
     'no-empty-pattern': ERROR,
+    'no-empty-static-block': ERROR,
     'no-empty': ERROR,
     'no-eq-null': ERROR,
     'no-eval': ERROR,
@@ -170,6 +172,7 @@ const eslintRules = {
     'no-negated-condition': ERROR,
     'no-nested-ternary': ERROR,
     'no-new-func': ERROR,
+    'no-new-native-nonconstructor': ERROR,
     'no-new-object': ERROR,
     'no-new-symbol': ERROR,
     'no-new-wrappers': ERROR,
@@ -410,6 +413,10 @@ const baseRules = merge(
         'exports-last': OFF,
         'no-deprecated': ERROR,
     }),
+    prefix('@nlib/', {
+        'no-globals': OFF,
+        'print-filename': OFF,
+    }),
 );
 
 const config = {
@@ -563,6 +570,7 @@ const config = {
                     'no-unsafe-argument': ERROR,
                     'no-unsafe-assignment': ERROR,
                     'no-unsafe-call': ERROR,
+                    'no-unsafe-declaration-merging': ERROR,
                     'no-unsafe-member-access': ERROR,
                     'no-unsafe-return': ERROR,
                     'no-useless-empty-export': ERROR,
@@ -591,7 +599,7 @@ const config = {
                     'restrict-plus-operands': ERROR,
                     'restrict-template-expressions': OFF,
                     'return-await': [ERROR, 'always'],
-                    'sort-type-union-intersection-members': ERROR,
+                    'sort-type-constituents': ERROR,
                     'strict-boolean-expressions': OFF,
                     'switch-exhaustiveness-check': ERROR,
                     'triple-slash-reference': [ERROR, {

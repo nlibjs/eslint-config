@@ -1,3 +1,4 @@
+//@ts-check
 import * as console from 'console';
 import * as assert from 'assert';
 import {ESLint} from 'eslint';

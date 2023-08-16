@@ -1,5 +1,6 @@
 /* eslint-env node */
 /* eslint-disable @nlib/no-globals */
+//@ts-check
 import console from 'console';
 import {ESLint} from 'eslint';
 import {available, ignorables} from './util.mjs';
@@ -13,7 +14,7 @@ const throwError = (...lines) => {
     errors.push(message);
 };
 const eslint = new ESLint({overrideConfigFile: '.eslintrc.json'});
-/** @param {string} ruleName  */
+/** @param {string} fullRuleName  */
 const isSupported = (fullRuleName) => {
     let prefix = `${fullRuleName.split('/')[0]}/`;
     let ruleName = fullRuleName.slice(prefix.length);

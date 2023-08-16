@@ -1,6 +1,7 @@
 /* eslint-disable @nlib/no-globals */
+//@ts-check
 import * as eslint from 'eslint';
-import * as tsPlugin from '@typescript-eslint/eslint-plugin';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
 import * as importPlugin from 'eslint-plugin-import';
 import * as nlibPlugin from '@nlib/eslint-plugin';
 
@@ -53,6 +54,8 @@ export const listMessages = function* (result) {
  */
 export const listRuleIds = function* (result) {
     for (const message of listMessages(result)) {
-        yield message.ruleId;
+        if (message.ruleId) {
+            yield message.ruleId;
+        }
     }
 };

@@ -3,7 +3,7 @@
     "publishConfig": {
         "access": "public"
     },
-    "version": "3.19.9",
+    "version": "3.19.7",
     "license": "Apache-2.0",
     "author": {
         "name": "Kei Ito",
@@ -26,9 +26,10 @@
         "test:rules": "node test/rules.test.mjs",
         "test:generator": "node test/generator.test.mjs",
         "lint": "eslint --ext .ts --ext .mjs build.mjs test",
-        "version": "run-s version:*",
-        "version:changelog": "nlib-changelog --output CHANGELOG.md",
-        "version:add": "git add ."
+        "postversion": "run-s postversion:*",
+        "postversion:changelog": "nlib-changelog --output CHANGELOG.md",
+        "postversion:add": "git add .",
+        "postversion:commit": "git commit --amend --no-edit"
     },
     "peerDependencies": {
         "eslint": ">= 8"

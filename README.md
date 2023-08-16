@@ -1,6 +1,6 @@
 # @nlib/eslint-config
 
-![Test](https://github.com/nlibjs/eslint-config/workflows/Test/badge.svg)
+[![Test](https://github.com/nlibjs/eslint-config/actions/workflows/test.yml/badge.svg)](https://github.com/nlibjs/eslint-config/actions/workflows/test.yml)
 
 ## Installation and Usage
 

@@ -26,19 +26,35 @@ const isSupported = (fullRuleName) => {
     return Boolean(matched && matched.rules.has(ruleName));
 };
 
+const types = new Set();
 for (const [type, {prefix, documentUrl, rules, fileName}] of Object.entries(available)) {
+    /** @type {{rules: Record<string, [number, ...Array<unknown>]>}} */
     const {rules: configuredRules = {}} = await eslint.calculateConfigForFile(fileName);
+    for (const [name, value] of Object.entries(configuredRules)) {
+        if (!Array.isArray(value) || typeof value[0] !== 'number') {
+            throwError(`${type}: ${name} should be [number, ...] but got ${value}`);
+        }
+    }
     for (const [name, rule] of rules) {
         const url = documentUrl(name);
         const fullName = `${prefix}${name}`;
-        if (rule.meta && rule.meta.deprecated) {
-            console.info(`${type}: should not cover "${fullName} (deprecated)"`);
+        let ignoredReason = '';
+        if (rule.meta) {
+            if (rule.meta.deprecated) {
+                ignoredReason = 'deprecated';
+            } else if (rule.meta.type === 'layout') {
+                ignoredReason = 'formatting';
+            }
+            types.add(rule.meta.type);
+        }
+        if (ignoredReason) {
+            console.info(`${type}: should not cover "${fullName} (${ignoredReason})"`);
             const configured = configuredRules[fullName];
             if (configured) {
                 /** @type {{replacedBy?: Array<string>}} */
                 const {replacedBy = ['none']} = rule.meta || {};
                 throwError(
-                    `${type}: ${fullName} is deprecated.`,
+                    `${type}: ${fullName} (${ignoredReason}) should not be covered.`,
                     `${indent}candidates: ${replacedBy.join(', ')}`,
                     `${indent}${url}`,
                 );

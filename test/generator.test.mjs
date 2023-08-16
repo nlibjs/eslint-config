@@ -32,7 +32,7 @@ const eslint = new ESLint({overrideConfigFile: '.eslintrc.json'});
     const result = await eslint.lintText(code);
     assert.deepEqual(
         [...listRuleIds(result)],
-        ['import/unambiguous', 'no-unused-vars', 'generator-star-spacing'],
+        ['import/unambiguous', 'no-unused-vars'],
     );
 }
 
@@ -47,7 +47,7 @@ const eslint = new ESLint({overrideConfigFile: '.eslintrc.json'});
     const result = await eslint.lintText(code);
     assert.deepEqual(
         [...listRuleIds(result)],
-        ['import/unambiguous', 'no-unused-vars', 'generator-star-spacing'],
+        ['import/unambiguous', 'no-unused-vars'],
     );
 
 }
@@ -81,7 +81,6 @@ const eslint = new ESLint({overrideConfigFile: '.eslintrc.json'});
         [
             'import/unambiguous',
             'func-style',
-            'generator-star-spacing',
             'no-unused-vars',
         ],
     );
@@ -101,8 +100,6 @@ const eslint = new ESLint({overrideConfigFile: '.eslintrc.json'});
         [
             'import/unambiguous',
             'func-style',
-            'generator-star-spacing',
-            'generator-star-spacing',
             'no-unused-vars',
         ],
     );
@@ -142,7 +139,6 @@ const eslint = new ESLint({overrideConfigFile: '.eslintrc.json'});
         [
             'import/unambiguous',
             'no-unused-vars',
-            'generator-star-spacing',
             'class-methods-use-this',
             'no-empty-function',
         ],

@@ -25,7 +25,7 @@
     "test": "run-s build test:*",
     "test:rules": "node test/rules.test.mjs",
     "test:generator": "node test/generator.test.mjs",
-    "lint": "eslint --ext .ts --ext .mjs build.mjs test",
+    "lint": "eslint --ext .mjs build.mjs test",
     "postversion": "run-s postversion:*",
     "postversion:changelog": "nlib-changelog --output CHANGELOG.md",
     "postversion:add": "git add .",
@@ -35,7 +35,7 @@
     "eslint": ">= 8"
   },
   "dependencies": {
-    "@nlib/eslint-plugin": "1.1.1",
+    "@nlib/eslint-plugin": "1.1.2",
     "@typescript-eslint/eslint-plugin": "6.4.0",
     "@typescript-eslint/parser": "6.4.0",
     "eslint-import-resolver-typescript": "3.6.0",

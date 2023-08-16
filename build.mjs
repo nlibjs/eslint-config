@@ -1,7 +1,7 @@
 import fs from 'fs';
 
 const OFF = 0;
-// const WARN = 1;
+const WARN = 1;
 const ERROR = 2;
 const INHERIT = Symbol('Inherit');
 const eslintRules = {
@@ -349,7 +349,7 @@ const baseRules = merge(
   }),
   prefix('@nlib/', {
     'no-globals': OFF,
-    'print-filename': OFF,
+    'print-filename': WARN,
   }),
 );
 

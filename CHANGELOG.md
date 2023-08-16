@@ -1,6 +1,10 @@
 # Changelog
 
-## v3.19.8 (2023-08-16)
+## v3.20.0 (2023-08-16)
+
+### Features
+
+- turn off formatting rules ([11df5fb](https://github.com/nlibjs/eslint-config/commit/11df5fb50db3ceb6c9f0943d3e5b2f98af48127d))
 
 ### Bug Fixes
 

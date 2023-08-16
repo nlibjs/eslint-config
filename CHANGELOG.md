@@ -1,15 +1,29 @@
 # Changelog
 
-## v3.20.0 (2023-08-16)
+## v3.20.1 (2023-08-16)
 
 ### Features
 
+- enable @nlib/print-filename ([7c20e79](https://github.com/nlibjs/eslint-config/commit/7c20e79a65bf147bd31d2c9ad55412a7a43a5b3b))
 - turn off formatting rules ([11df5fb](https://github.com/nlibjs/eslint-config/commit/11df5fb50db3ceb6c9f0943d3e5b2f98af48127d))
 
 ### Bug Fixes
 
 - add .mts and .cts ([2a5e653](https://github.com/nlibjs/eslint-config/commit/2a5e653e17ee9f9dfa724346649cbcfecb8236aa))
 
+### Styles
+
+- add prettier ([db3022e](https://github.com/nlibjs/eslint-config/commit/db3022e9ab2588d3336cb5234f679f9526263c30))
+
+### Documentation
+
+- fix badge ([f9bbd3a](https://github.com/nlibjs/eslint-config/commit/f9bbd3af8114afe2487bed74f2fea284f96e5f0a))
+
+### Dependency Upgrades
+
+- @nlib/eslint-plugin:1.1.1→1.1.2 ([99291ae](https://github.com/nlibjs/eslint-config/commit/99291ae8fad1dc4a34c284d645ad4e1be132d511))
+- @nlib/changelog:0.2.4→0.3.0 ([59e9656](https://github.com/nlibjs/eslint-config/commit/59e965617cfd3e7985af712bcd3647e83509bf1c))
+- @nlib/lint-commit:0.2.0→1.0.0 ([eee895f](https://github.com/nlibjs/eslint-config/commit/eee895f6e55878fa69ed18ffa7a1d4dc5814a5b4))
 
 ## v3.19.7 (2023-08-16)
 
@@ -25,13 +39,11 @@
 
 - @types/eslint:8.44.1→8.44.2 @types/node:18.17.5→20.5.0 @typescript-eslint/eslint-plugin:5.49.0→6.4.0 @typescript-eslint/parser:5.62.0→6.4.0 eslint:8.45.0→8.47.0 eslint-plugin-import:2.26.0→2.28.0 lint-staged:13.2.3→14.0.0 typescript:4.9.5→5.1.6 ([6cbdb7c](https://github.com/nlibjs/eslint-config/commit/6cbdb7c48c664e7ac83b3d9eff3c907d1d25984b))
 
-
 ## v3.19.6 (2023-01-05)
 
 ### Dependency Upgrades
 
 - @types/eslint:8.4.6→8.4.10 @types/node:18.7.14→18.11.18 @typescript-eslint/eslint-plugin:5.36.1→5.48.0 @typescript-eslint/parser:5.36.1→5.48.0 eslint:8.23.0→8.31.0 eslint-import-resolver-typescript:3.5.0→3.5.2 lint-staged:13.0.3→13.1.0 typescript:4.8.2→4.9.4 ([c546449](https://github.com/nlibjs/eslint-config/commit/c546449c0dfb1cde93007efde3e83b28525e555d))
-
 
 ## v3.19.5 (2022-09-03)
 
@@ -69,7 +81,6 @@
 - @types/eslint:8.4.2→8.4.5 eslint:8.17.0→8.21.0 ([57b529d](https://github.com/nlibjs/eslint-config/commit/57b529d3c69db4118330ebdc009d51814fecfbdb))
 - @nlib/eslint-plugin:1.1.0→1.1.1 ([499279e](https://github.com/nlibjs/eslint-config/commit/499279eb88fd78193c416c8267d334bd8454750d))
 
-
 ## v3.18.0 (2022-05-05)
 
 ### Features
@@ -90,7 +101,6 @@
 - ava:3.15.0→4.2.0 ([19718a9](https://github.com/nlibjs/eslint-config/commit/19718a91ec304e61172e45d03c0715efd02e6a03))
 - @types/eslint:8.2.1→8.4.2 @types/node:17.0.0→17.0.31 @typescript-eslint/eslint-plugin:5.7.0→5.22.0 @typescript-eslint/parser:5.7.0→5.22.0 eslint:8.5.0→8.14.0 lint-staged:12.1.3→12.4.1 ts-node:10.4.0→10.7.0 typescript:4.5.4→4.6.4 ([b67e6ad](https://github.com/nlibjs/eslint-config/commit/b67e6adeacb7687b9dcb175f948bbc6b69d50807))
 
-
 ## v3.17.30 (2021-12-18)
 
 ### Bug Fixes
@@ -101,7 +111,6 @@
 
 - npm dedupe ([1b46d01](https://github.com/nlibjs/eslint-config/commit/1b46d017a8a62c9ba0b2d7594090171fb391155b))
 - @nlib/eslint-plugin:1.0.17→1.0.18 @types/eslint:8.2.0→8.2.1 @types/node:16.11.10→17.0.0 @typescript-eslint/eslint-plugin:5.4.0→5.7.0 @typescript-eslint/parser:5.4.0→5.7.0 eslint:8.3.0→8.5.0 lint-staged:12.1.2→12.1.3 typescript:4.5.2→4.5.4 ([65e6dc8](https://github.com/nlibjs/eslint-config/commit/65e6dc8962e507d92c72df39fa8ebca86803f9fc))
-
 
 ## v3.17.29 (2021-11-25)
 
@@ -115,20 +124,17 @@
 - install @nlib/lint-commit ([8cf0413](https://github.com/nlibjs/eslint-config/commit/8cf041348d3e26b70535c24b22560967faf5665d))
 - @nlib/eslint-plugin:1.0.16→1.0.17 @types/eslint:7.29.0→8.2.0 @types/node:16.11.9→16.11.10 @typescript-eslint/eslint-plugin:5.1.0→5.4.0 eslint:7.32.0→8.3.0 lint-staged:11.2.6→12.1.2 ([113f026](https://github.com/nlibjs/eslint-config/commit/113f026b60c2bfb3fe5baff624be552f96f021fe))
 
-
 ## v3.17.28 (2021-10-22)
 
 ### Bug Fixes
 
 - delete no-implicit-any-catch ([0163599](https://github.com/nlibjs/eslint-config/commit/01635995b64481eb7271b157dbf6525fcd185083))
 
-
 ## v3.17.27 (2021-10-22)
 
 ### Dependency Upgrades
 
 - @nlib/eslint-plugin:1.0.15→1.0.16 @types/eslint:7.28.0→7.28.2 @types/node:16.10.1→16.11.3 @typescript-eslint/eslint-plugin:4.32.0→5.1.0 @typescript-eslint/parser:4.32.0→5.1.0 lint-staged:11.1.2→11.2.3 ts-node:10.2.1→10.3.1 typescript:4.4.3→4.4.4 ([b78376a](https://github.com/nlibjs/eslint-config/commit/b78376aa93cc06f0a16bd011f380cf39474aa3c4))
-
 
 ## v3.17.26 (2021-09-28)
 
@@ -139,7 +145,6 @@
 ### Dependency Upgrades
 
 - @types/node:16.9.6→16.10.1 @typescript-eslint/eslint-plugin:4.30.0→4.32.0 @typescript-eslint/parser:4.31.2→4.32.0 ([325a50e](https://github.com/nlibjs/eslint-config/commit/325a50e37695bcec31f00b410d759b2bb79a616e))
-
 
 ## v3.17.25 (2021-09-05)
 
@@ -152,7 +157,6 @@
 - @nlib/eslint-plugin:1.0.13→1.0.15 ([fd3a9fe](https://github.com/nlibjs/eslint-config/commit/fd3a9fe40f34e46b0c134ebb8884c0458e9f89d7))
 - uninstall @nlib/changelog @nlib/lint-commit ([abe0ef0](https://github.com/nlibjs/eslint-config/commit/abe0ef0071ab34c205f4cd6e5270cc73450dee4d))
 
-
 ## v3.17.24 (2021-08-24)
 
 ### Dependency Upgrades
@@ -160,13 +164,11 @@
 - @types/node:15.14.7→16.7.1 @typescript-eslint/eslint-plugin:4.28.5→4.29.3 @typescript-eslint/parser:4.29.2→4.29.3 ([9433b03](https://github.com/nlibjs/eslint-config/commit/9433b030f6440a926693f6a39f9a9c2af3fbbc8d))
 - @nlib/eslint-plugin:1.0.12→1.0.13 ts-node:9.1.1→10.2.1 ([8b08a15](https://github.com/nlibjs/eslint-config/commit/8b08a156b7c6b0dab4d3006a0665549de59e1d42))
 
-
 ## v3.17.23 (2021-07-01)
 
 ### Features
 
 - support tsx ([f3eed68](https://github.com/nlibjs/eslint-config/commit/f3eed68c9259d2120d279b6cfc82016719ccbf20))
-
 
 ## v3.17.22 (2021-05-08)
 
@@ -174,13 +176,11 @@
 
 - @types/node:14.14.43→15.0.2 (#106) ([b0c9cb3](https://github.com/nlibjs/eslint-config/commit/b0c9cb3c1b8eeb4f6475c9ee03e62b28e7127b49))
 
-
 ## v3.17.21 (2021-03-27)
 
 ### Dependency Upgrades
 
 - setup githooks (#88) ([31c7f98](https://github.com/nlibjs/eslint-config/commit/31c7f98a66b2c2800899938978c660d5abb6a646))
-
 
 ## v3.17.20 (2021-03-04)
 
@@ -192,13 +192,11 @@
 
 - @typescript-eslint/eslint-plugin:4.15.2→4.16.1 @typescript-eslint/parser:4.15.2→4.16.1 husky:4.3.8→5.1.3 ([7631f6f](https://github.com/nlibjs/eslint-config/commit/7631f6f83a3bc24596ecd79b481a7917706ebd31))
 
-
 ## v3.17.19 (2021-02-24)
 
 ### Dependency Upgrades
 
 - upgrade nlib/eslint-plugin ([e0752e2](https://github.com/nlibjs/eslint-config/commit/e0752e299ba518462143aef0c8f1b3315b033f1a))
-
 
 ## v3.17.18 (2021-02-11)
 
@@ -207,9 +205,7 @@
 - upgrade nlib/eslint-plugin ([c62bd98](https://github.com/nlibjs/eslint-config/commit/c62bd9854291a255ef423fba29c18c5dab582908))
 - pin dependencies ([b61505c](https://github.com/nlibjs/eslint-config/commit/b61505c0ffb24b6a77cfdcb2cc8fc8e2e6666878))
 
-
 ## v3.17.17 (2021-02-11)
-
 
 ## v3.17.16 (2020-12-19)
 
@@ -217,13 +213,11 @@
 
 - upgrade dependencies (#48) ([6ac5d45](https://github.com/nlibjs/eslint-config/commit/6ac5d4544308c935f60334581af9e7380c014567))
 
-
 ## v3.17.15 (2020-11-08)
 
 ### Features
 
 - upgrade typescript-eslint/eslint-plugin (#16) ([5a47b03](https://github.com/nlibjs/eslint-config/commit/5a47b03f675a64fde41f112b04b78b3d9784816b))
-
 
 ## v3.17.14 (2020-10-03)
 
@@ -232,13 +226,11 @@
 - @nlib/changelog@0.1.8 ([42fca0b](https://github.com/nlibjs/eslint-config/commit/42fca0ba2916470413ce0d2c9e6941a5450f04a2))
 - install @nlib/lint-commit ([0285100](https://github.com/nlibjs/eslint-config/commit/0285100212a14e2f4b8712dff988c13c5bf5acbd))
 
-
 ## v3.17.12 (2020-09-10)
 
 ### Dependency Upgrades
 
 - @typescript-eslint/eslint-plugin@4.1.0 ([5cfbd8f](https://github.com/nlibjs/eslint-config/commit/5cfbd8fd681f147577afb1f99ad303a687bff1d8))
-
 
 ## v3.17.11 (2020-09-05)
 
@@ -250,13 +242,11 @@
 
 - move dependencies ([7c11bb9](https://github.com/nlibjs/eslint-config/commit/7c11bb9043087a467e745c349e8917875d80008a))
 
-
 ## v3.17.10 (2020-09-05)
 
 ### Features
 
 - expose commitlint.config ([8679cab](https://github.com/nlibjs/eslint-config/commit/8679cabcb10cc78dcc423d4a2210e746f92dc167))
-
 
 ## v3.17.9 (2020-09-02)
 
@@ -264,13 +254,11 @@
 
 - include the plugin ([ce696da](https://github.com/nlibjs/eslint-config/commit/ce696da90f735c8d72d1e931aeedb80e831a1fe6))
 
-
 ## v3.17.8 (2020-09-02)
 
 ### Reverts
 
 - remove plugin ([bd33da8](https://github.com/nlibjs/eslint-config/commit/bd33da805cc0b2727a3d44b9d3f600e689494eee))
-
 
 ## v3.17.7 (2020-09-02)
 
@@ -278,13 +266,11 @@
 
 - support typescript-eslint 4.0.1 ([04341f9](https://github.com/nlibjs/eslint-config/commit/04341f9366d14c1a3d599f31c412b858c62ec9bd))
 
-
 ## v3.17.6 (2020-08-30)
 
 ### Features
 
 - add plugin ([c07d877](https://github.com/nlibjs/eslint-config/commit/c07d877bf11f231a66fbd5a8a925d1a5353d7ddb))
-
 
 ## v3.17.5 (2020-08-25)
 
@@ -296,7 +282,6 @@
 
 - test generator-star-spacing ([961605c](https://github.com/nlibjs/eslint-config/commit/961605ceababa7ae401f5ab2018133b9b8b3f9b8))
 
-
 ## v3.17.4 (2020-08-23)
 
 ### Bug Fixes
@@ -307,7 +292,6 @@
 ### Documentation
 
 - add the installation guide ([6ec69c4](https://github.com/nlibjs/eslint-config/commit/6ec69c4706556740c77ab7e2cf1bf2f25413f95a))
-
 
 ## v3.17.3 (2020-08-23)
 
@@ -322,5 +306,3 @@
 ### Documentation
 
 - add a status badge ([cef221e](https://github.com/nlibjs/eslint-config/commit/cef221ec79cbf7752a6843c0c22d1cad079ef562))
-
-

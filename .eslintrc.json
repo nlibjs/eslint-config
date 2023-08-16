@@ -602,7 +602,11 @@
         {
             "files": [
                 "*.ts",
-                "*.tsx"
+                "*.tsx",
+                "*.mts",
+                "*.mtsx",
+                "*.cts",
+                "*.ctsx"
             ],
             "parser": "@typescript-eslint/parser",
             "parserOptions": {

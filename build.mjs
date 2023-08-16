@@ -437,7 +437,7 @@ const config = {
     },
     overrides: [
         {
-            files: ['*.ts', '*.tsx'],
+            files: ['*.ts', '*.tsx', '*.mts', '*.mtsx', '*.cts', '*.ctsx'],
             parser: '@typescript-eslint/parser',
             parserOptions: {
                 project: './tsconfig.json',

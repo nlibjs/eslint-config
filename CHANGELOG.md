@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.19.9 (2023-08-16)
+
+### Bug Fixes
+
+- add .mts and .cts ([2a5e653](https://github.com/nlibjs/eslint-config/commit/2a5e653e17ee9f9dfa724346649cbcfecb8236aa))
+
+
 ## v3.19.7 (2023-08-16)
 
 ### Features

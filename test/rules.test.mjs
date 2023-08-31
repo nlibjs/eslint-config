@@ -1,7 +1,7 @@
 /* eslint-env node */
 /* eslint-disable @nlib/no-globals */
 //@ts-check
-import console from 'console';
+import console from 'node:console';
 import { ESLint } from 'eslint';
 import { available, ignorables } from './util.mjs';
 

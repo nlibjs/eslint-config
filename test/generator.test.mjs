@@ -1,6 +1,6 @@
 //@ts-check
-import * as console from 'console';
-import * as assert from 'assert';
+import * as console from 'node:console';
+import * as assert from 'node:assert';
 import { ESLint } from 'eslint';
 import { listRuleIds } from './util.mjs';
 

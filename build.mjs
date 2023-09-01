@@ -469,7 +469,7 @@ const config = {
           'no-explicit-any': ERROR,
           'no-extra-non-null-assertion': ERROR,
           'no-extraneous-class': ERROR,
-          'no-floating-promises': ERROR,
+          'no-floating-promises': [ERROR, { ignoreVoid: true }],
           'no-for-in-array': ERROR,
           'no-import-type-side-effects': ERROR,
           'no-inferrable-types': ERROR,

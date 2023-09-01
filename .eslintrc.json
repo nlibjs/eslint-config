@@ -483,7 +483,12 @@
         "@typescript-eslint/no-explicit-any": 2,
         "@typescript-eslint/no-extra-non-null-assertion": 2,
         "@typescript-eslint/no-extraneous-class": 2,
-        "@typescript-eslint/no-floating-promises": 2,
+        "@typescript-eslint/no-floating-promises": [
+          2,
+          {
+            "ignoreVoid": true
+          }
+        ],
         "@typescript-eslint/no-for-in-array": 2,
         "@typescript-eslint/no-import-type-side-effects": 2,
         "@typescript-eslint/no-inferrable-types": 2,

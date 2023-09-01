@@ -1,9 +1,10 @@
 # Changelog
 
-## v3.20.1 (2023-08-16)
+## v3.20.2 (2023-09-01)
 
 ### Features
 
+- allow intentionally not awaited promises ([8f3cee3](https://github.com/nlibjs/eslint-config/commit/8f3cee357b5a24237a8bdf0515b2c2fd2ee0a11c))
 - enable @nlib/print-filename ([7c20e79](https://github.com/nlibjs/eslint-config/commit/7c20e79a65bf147bd31d2c9ad55412a7a43a5b3b))
 - turn off formatting rules ([11df5fb](https://github.com/nlibjs/eslint-config/commit/11df5fb50db3ceb6c9f0943d3e5b2f98af48127d))
 
@@ -21,6 +22,15 @@
 
 ### Dependency Upgrades
 
+- @typescript-eslint/eslint-plugin:6.4.0→6.5.0 @typescript-eslint/parser:6.4.0→6.5.0 ([05970e9](https://github.com/nlibjs/eslint-config/commit/05970e9b8f686a9510f6ba87975b93cf9304875f))
+- eslint:8.47.0→8.48.0 ([95c8702](https://github.com/nlibjs/eslint-config/commit/95c870207e77eb1b5a2ea3678fa8b482fd31b14f))
+- eslint-plugin-import:2.28.0→2.28.1 ([2e05d21](https://github.com/nlibjs/eslint-config/commit/2e05d21b09f11101bb44e16860e1c214a0082a9e))
+- prettier:3.0.2→3.0.3 ([1241aff](https://github.com/nlibjs/eslint-config/commit/1241aff6610b444983ceda2c2ff275b0fa2dbee7))
+- @nlib/lint-commit:1.0.0→1.0.1 ([7a20306](https://github.com/nlibjs/eslint-config/commit/7a2030621f2cbc66cf9441eab24389f55bd431aa))
+- @nlib/githooks:0.1.0→0.2.0 ([a0c96f4](https://github.com/nlibjs/eslint-config/commit/a0c96f43e5162014f9547fdf7c3dc9c4810d584f))
+- @types/node:20.5.0→20.5.7 ([c914a8b](https://github.com/nlibjs/eslint-config/commit/c914a8bb54b17467d4be263eac252e8a00b2dbe3))
+- lint-staged:14.0.0→14.0.1 ([330b829](https://github.com/nlibjs/eslint-config/commit/330b82997d160138f6e81ea1574f7f595dfcb853))
+- typescript:5.1.6→5.2.2 ([aa156b9](https://github.com/nlibjs/eslint-config/commit/aa156b93ab1fe313c847e305517181926c65d5ab))
 - @nlib/eslint-plugin:1.1.1→1.1.2 ([99291ae](https://github.com/nlibjs/eslint-config/commit/99291ae8fad1dc4a34c284d645ad4e1be132d511))
 - @nlib/changelog:0.2.4→0.3.0 ([59e9656](https://github.com/nlibjs/eslint-config/commit/59e965617cfd3e7985af712bcd3647e83509bf1c))
 - @nlib/lint-commit:0.2.0→1.0.0 ([eee895f](https://github.com/nlibjs/eslint-config/commit/eee895f6e55878fa69ed18ffa7a1d4dc5814a5b4))

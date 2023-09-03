@@ -524,7 +524,7 @@ const config = {
           'prefer-reduce-type-parameter': ERROR,
           'prefer-regexp-exec': ERROR,
           'prefer-readonly': ERROR,
-          'prefer-return-this-type': OFF,
+          'prefer-return-this-type': ERROR,
           'prefer-string-starts-ends-with': ERROR,
           'prefer-ts-expect-error': ERROR,
           'promise-function-async': ERROR,

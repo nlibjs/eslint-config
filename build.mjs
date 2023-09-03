@@ -519,7 +519,7 @@ const config = {
           'prefer-literal-enum-member': ERROR,
           'prefer-namespace-keyword': ERROR,
           'prefer-nullish-coalescing': ERROR,
-          'prefer-optional-chain': OFF,
+          'prefer-optional-chain': ERROR,
           'prefer-readonly-parameter-types': OFF,
           'prefer-reduce-type-parameter': ERROR,
           'prefer-regexp-exec': ERROR,

@@ -514,7 +514,7 @@ const config = {
           'prefer-as-const': ERROR,
           'prefer-enum-initializers': ERROR,
           'prefer-for-of': ERROR,
-          'prefer-function-type': OFF,
+          'prefer-function-type': ERROR,
           'prefer-includes': ERROR,
           'prefer-literal-enum-member': ERROR,
           'prefer-namespace-keyword': OFF,

@@ -518,7 +518,7 @@ const config = {
           'prefer-includes': ERROR,
           'prefer-literal-enum-member': ERROR,
           'prefer-namespace-keyword': ERROR,
-          'prefer-nullish-coalescing': OFF,
+          'prefer-nullish-coalescing': ERROR,
           'prefer-optional-chain': OFF,
           'prefer-readonly-parameter-types': OFF,
           'prefer-reduce-type-parameter': ERROR,

@@ -1,5 +1,23 @@
 # Changelog
 
+## v3.20.3 (2023-09-03)
+
+### Features
+
+- enable @typescript-eslint/prefer-return-this-type ([21c8a59](https://github.com/nlibjs/eslint-config/commit/21c8a593c87f8e6d87cecca982085cd454c1468a))
+- enable @typescript-eslint/prefer-optional-chain ([9ad9f73](https://github.com/nlibjs/eslint-config/commit/9ad9f73c2d63c5ffca1c61900972ebd2e58db985))
+- enable @typescript-eslint/prefer-nullish-coalescing ([6b07d75](https://github.com/nlibjs/eslint-config/commit/6b07d752ec5d3af29959e22dfacd8182e83a2e00))
+- enable @typescript-eslint/prefer-namespace-keyword ([812b73a](https://github.com/nlibjs/eslint-config/commit/812b73aee63f3e430dcf3862023095c50e1f6738))
+- enable @typescript-eslint/prefer-function-type ([78d44dc](https://github.com/nlibjs/eslint-config/commit/78d44dc89ceed54271aa9b67e0f18fcea50f5b86))
+
+### Continuous Integration
+
+- skip multi platform tests ([0bbd051](https://github.com/nlibjs/eslint-config/commit/0bbd051c035ab8bff1fdaa2c408cc3a81b2b00ce))
+
+### Dependency Upgrades
+
+- @types/node:20.5.7→20.5.9 ([0a7a467](https://github.com/nlibjs/eslint-config/commit/0a7a4672694c44a5a08c14a199c9037f6520e0ec))
+
 ## v3.20.2 (2023-09-01)
 
 ### Features

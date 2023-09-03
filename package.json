@@ -12,9 +12,6 @@
   },
   "homepage": "https://github.com/nlibjs/eslint-config",
   "repository": "https://github.com/nlibjs/eslint-config",
-  "engines": {
-    "node": ">=12"
-  },
   "type": "module",
   "main": ".eslintrc.json",
   "files": [

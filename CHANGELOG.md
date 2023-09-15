@@ -1,5 +1,21 @@
 # Changelog
 
+## v3.20.4 (2023-09-15)
+
+### Features
+
+- update import/order ([eefeb09](https://github.com/nlibjs/eslint-config/commit/eefeb09e70c63de14bf1074f18ad77d9159bf680))
+
+### Bug Fixes
+
+- eslint errors ([7461c84](https://github.com/nlibjs/eslint-config/commit/7461c8438143031dc77418d31422fbe2457dad5c))
+
+### Dependency Upgrades
+
+- @typescript-eslint/eslint-plugin:6.5.0→6.7.0 @typescript-eslint/parser:6.5.0→6.7.0 ([cc9a123](https://github.com/nlibjs/eslint-config/commit/cc9a12381b558214b785cb0d721438d9cc7872b6))
+- eslint:8.48.0→8.49.0 ([1f392ff](https://github.com/nlibjs/eslint-config/commit/1f392ffc6529029f9014a88899571843d2dd0258))
+- @types/node:20.5.9→20.6.1 ([fe9a922](https://github.com/nlibjs/eslint-config/commit/fe9a9220783249443d879180557a8d7d250a4053))
+
 ## v3.20.3 (2023-09-03)
 
 ### Features

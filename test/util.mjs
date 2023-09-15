@@ -1,9 +1,9 @@
 /* eslint-disable @nlib/no-globals */
 //@ts-check
-import * as eslint from 'eslint';
-import tsPlugin from '@typescript-eslint/eslint-plugin';
-import * as importPlugin from 'eslint-plugin-import';
 import * as nlibPlugin from '@nlib/eslint-plugin';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
+import * as eslint from 'eslint';
+import * as importPlugin from 'eslint-plugin-import';
 
 export const available = {
   js: {

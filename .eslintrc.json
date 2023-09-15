@@ -305,7 +305,24 @@
     "import/no-webpack-loader-syntax": 2,
     "import/no-unassigned-import": 2,
     "import/no-useless-path-segments": 2,
-    "import/order": 2,
+    "import/order": [
+      2,
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object"
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
     "import/prefer-default-export": 0,
     "import/unambiguous": 2,
     "@nlib/no-globals": 0,

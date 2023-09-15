@@ -343,7 +343,21 @@ const baseRules = merge(
     'no-webpack-loader-syntax': ERROR,
     'no-unassigned-import': ERROR,
     'no-useless-path-segments': ERROR,
-    'order': ERROR,
+    'order': [
+      ERROR,
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+        ],
+        alphabetize: { order: 'asc', caseInsensitive: true },
+      },
+    ],
     'prefer-default-export': OFF,
     'unambiguous': ERROR,
   }),

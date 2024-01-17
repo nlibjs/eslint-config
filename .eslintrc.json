@@ -5,7 +5,7 @@
   },
   "plugins": ["@nlib/eslint-plugin", "eslint-plugin-import"],
   "env": {
-    "es2022": true
+    "es2023": true
   },
   "rules": {
     "accessor-pairs": 0,
@@ -64,7 +64,6 @@
     "no-class-assign": 2,
     "no-compare-neg-zero": 2,
     "no-cond-assign": 2,
-    "no-confusing-arrow": 0,
     "no-console": 2,
     "no-const-assign": 2,
     "no-constant-binary-expression": 2,
@@ -99,9 +98,7 @@
     "no-extra-bind": 2,
     "no-extra-boolean-cast": 2,
     "no-extra-label": 2,
-    "no-extra-semi": 2,
     "no-fallthrough": 2,
-    "no-floating-decimal": 2,
     "no-func-assign": 2,
     "no-global-assign": 2,
     "no-implicit-coercion": 2,
@@ -122,32 +119,18 @@
     "no-loss-of-precision": 2,
     "no-magic-numbers": 0,
     "no-misleading-character-class": 2,
-    "no-mixed-operators": [
-      2,
-      {
-        "groups": [
-          ["*", "%", "**"],
-          ["/", "%", "**"],
-          ["&", "|", "^", "~", "<<", ">>", ">>>"],
-          ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
-          ["&&", "||"],
-          ["in", "instanceof"]
-        ],
-        "allowSamePrecedence": false
-      }
-    ],
     "no-multi-assign": 0,
     "no-multi-str": 2,
     "no-negated-condition": 2,
     "no-nested-ternary": 2,
     "no-new-func": 2,
     "no-new-native-nonconstructor": 2,
-    "no-new-object": 2,
     "no-new-symbol": 2,
     "no-new-wrappers": 2,
     "no-new": 2,
     "no-nonoctal-decimal-escape": 2,
     "no-obj-calls": 2,
+    "no-object-constructor": 2,
     "no-octal-escape": 2,
     "no-octal": 2,
     "no-param-reassign": 0,
@@ -221,7 +204,6 @@
     "no-warning-comments": 2,
     "no-with": 2,
     "object-shorthand": [2, "always"],
-    "one-var-declaration-per-line": 0,
     "one-var": [2, "never"],
     "operator-assignment": 0,
     "prefer-arrow-callback": 2,
@@ -249,7 +231,6 @@
     "prefer-rest-params": 2,
     "prefer-spread": 2,
     "prefer-template": 2,
-    "quote-props": [2, "consistent-as-needed"],
     "radix": 2,
     "require-atomic-updates": 2,
     "require-await": 2,
@@ -258,7 +239,6 @@
     "sort-imports": 0,
     "sort-keys": 0,
     "sort-vars": 0,
-    "spaced-comment": 0,
     "strict": [2, "never"],
     "symbol-description": 2,
     "use-isnan": 2,
@@ -387,14 +367,14 @@
         "@typescript-eslint/dot-notation": 2,
         "init-declarations": 0,
         "@typescript-eslint/init-declarations": 0,
+        "max-params": 0,
+        "@typescript-eslint/max-params": 0,
         "no-array-constructor": 0,
         "@typescript-eslint/no-array-constructor": 2,
         "no-dupe-class-members": 0,
         "@typescript-eslint/no-dupe-class-members": 2,
         "no-empty-function": 0,
         "@typescript-eslint/no-empty-function": 2,
-        "no-extra-semi": 0,
-        "@typescript-eslint/no-extra-semi": 2,
         "no-implied-eval": 0,
         "@typescript-eslint/no-implied-eval": 2,
         "no-invalid-this": 0,
@@ -431,6 +411,22 @@
             "variables": false
           }
         ],
+        "prefer-destructuring": 0,
+        "@typescript-eslint/prefer-destructuring": [
+          2,
+          {
+            "VariableDeclarator": {
+              "array": false,
+              "object": true
+            },
+            "AssignmentExpression": {
+              "array": false,
+              "object": false
+            }
+          }
+        ],
+        "prefer-promise-reject-errors": 0,
+        "@typescript-eslint/prefer-promise-reject-errors": 2,
         "require-await": 0,
         "@typescript-eslint/require-await": 2,
         "@typescript-eslint/adjacent-overload-signatures": 2,
@@ -479,6 +475,7 @@
         "@typescript-eslint/member-ordering": 0,
         "@typescript-eslint/method-signature-style": 2,
         "@typescript-eslint/naming-convention": 0,
+        "@typescript-eslint/no-array-delete": 2,
         "@typescript-eslint/no-base-to-string": [
           2,
           {
@@ -549,7 +546,9 @@
         "@typescript-eslint/no-unsafe-declaration-merging": 2,
         "@typescript-eslint/no-unsafe-member-access": 2,
         "@typescript-eslint/no-unsafe-return": 2,
+        "@typescript-eslint/no-unsafe-unary-minus": 2,
         "@typescript-eslint/no-useless-empty-export": 2,
+        "@typescript-eslint/no-useless-template-literals": 2,
         "@typescript-eslint/no-redundant-type-constituents": 2,
         "@typescript-eslint/no-var-requires": 2,
         "@typescript-eslint/non-nullable-type-assertion-style": 0,

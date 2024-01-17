@@ -18,7 +18,9 @@
     ".eslintrc.json"
   ],
   "scripts": {
-    "build": "node build.mjs",
+    "build": "run-s build:*",
+    "build:main": "node build.mjs",
+    "build:format": "prettier --write .eslintrc.json",
     "test": "run-s build test:*",
     "test:rules": "node test/rules.test.mjs",
     "test:generator": "node test/generator.test.mjs",
@@ -30,8 +32,8 @@
   },
   "dependencies": {
     "@nlib/eslint-plugin": "1.1.2",
-    "@typescript-eslint/eslint-plugin": "6.7.5",
-    "@typescript-eslint/parser": "6.18.1",
+    "@typescript-eslint/eslint-plugin": "6.19.0",
+    "@typescript-eslint/parser": "6.19.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-import": "2.29.1"
   },
@@ -41,7 +43,7 @@
     "@nlib/lint-commit": "1.0.1",
     "@types/eslint": "8.56.2",
     "@types/node": "20.11.4",
-    "eslint": "8.49.0",
+    "eslint": "8.56.0",
     "lint-staged": "15.2.0",
     "npm-run-all": "4.1.5",
     "prettier": "3.2.3",

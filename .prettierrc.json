@@ -3,5 +3,13 @@
   "tabWidth": 2,
   "singleQuote": true,
   "bracketSpacing": true,
-  "quoteProps": "consistent"
+  "quoteProps": "consistent",
+  "overrides": [
+    {
+      "files": ["*.json"],
+      "options": {
+        "trailingComma": "none"
+      }
+    }
+  ]
 }
